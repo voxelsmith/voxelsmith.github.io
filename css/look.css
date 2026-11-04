@@ -82,7 +82,7 @@ button, input { font: inherit; }
 }
 .site-nav a {
   text-decoration: none;
-  color: #fff8e8;
+  color: var(--ink);
   font-family: var(--sans);
   font-size: 0.95rem;
   font-weight: 600;
@@ -107,7 +107,7 @@ button, input { font: inherit; }
 }
 .nav-tools a {
   text-decoration: none;
-  color: #cdd6f4;
+  color: var(--ink);
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid var(--line);
   border-radius: 999px;
@@ -117,7 +117,7 @@ button, input { font: inherit; }
   box-shadow: none;
   backdrop-filter: blur(10px);
 }
-.nav-tools a:hover { background: rgba(203, 166, 247, 0.28); color: #cdd6f4; }
+.nav-tools a:hover { background: rgba(203, 166, 247, 0.28); color: var(--ink); }
 .nav-toggle {
   display: none;
   margin-left: auto;
@@ -150,7 +150,7 @@ button, input { font: inherit; }
 
 .page-hero {
   background: rgba(30, 30, 46, 0.55);
-  color: #cdd6f4;
+  color: var(--ink);
   text-align: center;
   padding: 64px 20px 52px;
   border-bottom: 1px solid var(--line);
@@ -164,7 +164,7 @@ button, input { font: inherit; }
   letter-spacing: 0;
   line-height: 1.05;
   text-transform: uppercase;
-  color: #cdd6f4;
+  color: var(--ink);
   -webkit-text-stroke: 2px #11111b;
   paint-order: stroke fill;
   text-shadow:
@@ -177,7 +177,7 @@ button, input { font: inherit; }
 .page-hero p {
   max-width: 640px;
   margin: 16px auto 0;
-  color: #bac2de;
+  color: var(--muted);
   font-size: 1.05rem;
 }
 .legend {
@@ -188,7 +188,7 @@ button, input { font: inherit; }
   list-style: none;
   padding: 0;
   margin: 28px 0 0;
-  color: #bac2de;
+  color: var(--muted);
   font-size: 0.92rem;
 }
 .legend li { display: flex; align-items: center; gap: 8px; }
@@ -235,7 +235,7 @@ h3, .game-body h3, .job h3, .skill h2, .award h2, .concept h3 {
   font-size: 1.7rem;
   letter-spacing: 0;
   line-height: 1.2;
-  color: #cdd6f4;
+  color: var(--ink);
   -webkit-text-stroke: 2px #11111b;
   paint-order: stroke fill;
   text-shadow:
@@ -256,9 +256,21 @@ h3, .game-body h3, .job h3, .skill h2, .award h2, .concept h3 {
 
 .game-card, .award, .job, .skill, .case, .now, .replay, .art-tile {
   box-shadow: var(--shadow);
-  border: 1px solid var(--line);
+  border: 2px solid #ffffff;
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
+}
+.text-btn, .btn, .filters button, .nav-tools a, .theme-toggle, .now-points span {
+  border: 2px solid #ffffff;
+}
+.story-link {
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: none;
+  background: none;
+  border: 0;
+  box-shadow: none;
+  padding: 4px 0;
 }
 .game-card {
   background: var(--card);
@@ -314,7 +326,7 @@ h3, .game-body h3, .job h3, .skill h2, .award h2, .concept h3 {
   font-family: var(--display);
   font-size: clamp(32px, 4vw, 48px);
   letter-spacing: 0;
-  color: #cdd6f4;
+  color: var(--ink);
 }
 .now-logo {
   width: 72px;
@@ -323,7 +335,7 @@ h3, .game-body h3, .job h3, .skill h2, .award h2, .concept h3 {
   border-radius: 14px;
   margin-bottom: 10px;
 }
-.now p { margin: 10px 0 0; color: #f0d7c4; }
+.now p { margin: 10px 0 0; color: var(--ink); }
 .now-points {
   display: flex;
   flex-wrap: wrap;
@@ -333,7 +345,7 @@ h3, .game-body h3, .job h3, .skill h2, .award h2, .concept h3 {
 .now-points span {
   border: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.08);
-  color: #cdd6f4;
+  color: var(--ink);
   border-radius: 999px;
   padding: 4px 10px;
   font-size: 0.92rem;
@@ -388,7 +400,7 @@ h3, .game-body h3, .job h3, .skill h2, .award h2, .concept h3 {
 .text-btn, .filters button, .tag-list button {
   border: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.08);
-  color: #cdd6f4;
+  color: var(--ink);
   text-decoration: none;
   cursor: pointer;
 }
@@ -434,9 +446,9 @@ h3, .game-body h3, .job h3, .skill h2, .award h2, .concept h3 {
   font-family: var(--display);
   font-size: clamp(32px, 4vw, 52px);
   letter-spacing: 0;
-  color: #cdd6f4;
+  color: var(--ink);
 }
-.replay p { max-width: 68ch; color: #f0d7c4; }
+.replay p { max-width: 68ch; color: var(--ink); }
 .tag-panel {
   background: var(--card);
   border: 1px solid var(--line);
@@ -507,7 +519,7 @@ h3, .game-body h3, .job h3, .skill h2, .award h2, .concept h3 {
   box-shadow: none;
 }
 .btn-light { background: #cba6f7; color: #11111b; border: 1px solid #cba6f7; box-shadow: none; }
-.btn-ghost { background: rgba(205, 214, 244, 0.08); color: #cdd6f4; border: 1px solid rgba(88, 91, 112, 0.85); box-shadow: none; }
+.btn-ghost { background: rgba(205, 214, 244, 0.08); color: var(--ink); border: 1px solid rgba(88, 91, 112, 0.85); box-shadow: none; }
 .btn:hover { transform: translateY(-1px); }
 
 .experience { display: grid; gap: 14px; padding-bottom: 30px; }
@@ -524,7 +536,7 @@ h3, .game-body h3, .job h3, .skill h2, .award h2, .concept h3 {
 .job time { color: var(--muted); font-weight: 800; font-size: 0.9rem; }
 .job h3 { margin: 0; font-family: var(--display); letter-spacing: 0; line-height: 1.2; }
 .job .company { margin: 2px 0 8px; font-weight: 700; }
-.job p, .award p, .concept p, .video-block p, .skill p, .replay p { margin: 0; color: #f0d7c4; }
+.job p, .award p, .concept p, .video-block p, .skill p, .replay p { margin: 0; color: var(--ink); }
 
 .case-list { display: grid; gap: 22px; padding-bottom: 48px; }
 .case {
@@ -576,7 +588,7 @@ h3, .game-body h3, .job h3, .skill h2, .award h2, .concept h3 {
   font-family: var(--display);
   letter-spacing: 0;
 }
-.award p, .concept p, .video-block p { margin: 0; color: #f0d7c4; }
+.award p, .concept p, .video-block p { margin: 0; color: var(--ink); }
 .award .kicker, .concept .kicker { color: var(--accent); }
 .video-frame {
   margin-top: 16px;
@@ -603,12 +615,12 @@ h3, .game-body h3, .job h3, .skill h2, .award h2, .concept h3 {
 }
 .skill img { width: 54px; height: 54px; object-fit: contain; background: #fff; border-radius: 10px; padding: 6px; }
 .skill h2 { margin: 12px 0 8px; font-size: 1.25rem; font-family: var(--display); }
-.skill p { margin: 0; color: #f0d7c4; }
+.skill p { margin: 0; color: var(--ink); }
 .skill .tool { margin-top: 12px; font-weight: 800; }
 
 .site-foot {
   background: rgba(24, 24, 37, 0.78);
-  color: #cdd6f4;
+  color: var(--ink);
   padding: 28px 0;
   margin-top: 20px;
   border-top: 1px solid var(--line);
@@ -620,10 +632,10 @@ h3, .game-body h3, .job h3, .skill h2, .award h2, .concept h3 {
   gap: 20px;
   align-items: center;
 }
-.site-foot strong { color: #fff; display: block; }
+.site-foot strong { color: var(--ink); display: block; }
 .site-foot p { margin: 4px 0 0; }
 .foot-links { display: flex; flex-wrap: wrap; gap: 14px; }
-.foot-links a { color: #fff; font-weight: 700; }
+.foot-links a { color: var(--ink); font-weight: 700; }
 
 @media (max-width: 980px) {
   .featured-grid, .featured-grid.cols-3, .game-grid, .skill-grid, .case, .home-hero, .job, .now, .award-grid, .concept-grid { grid-template-columns: 1fr; }
@@ -669,7 +681,7 @@ h3, .game-body h3, .job h3, .skill h2, .award h2, .concept h3 {
   border: 1px solid var(--line);
   border-radius: 16px;
   background: rgba(49, 50, 68, 0.72);
-  color: #cdd6f4;
+  color: var(--ink);
   cursor: pointer;
   overflow: hidden;
   text-align: left;
@@ -696,7 +708,7 @@ h3, .game-body h3, .job h3, .skill h2, .award h2, .concept h3 {
   border: 1px solid var(--line);
   border-radius: 18px;
   background: rgba(49, 50, 68, 0.72);
-  color: #cdd6f4;
+  color: var(--ink);
 }
 #viewer::backdrop { background: rgba(17, 17, 27, 0.72); }
 #viewer img { width: 100%; height: auto; background: #181825; }
@@ -713,7 +725,7 @@ h3, .game-body h3, .job h3, .skill h2, .award h2, .concept h3 {
   border-radius: 10px;
   background: #cba6f7;
   color: #11111b;
-  color: #cdd6f4;
+  color: var(--ink);
   font-weight: 800;
   padding: 8px 12px;
   cursor: pointer;
@@ -725,10 +737,108 @@ h3, .game-body h3, .job h3, .skill h2, .award h2, .concept h3 {
   .shelf { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
+@view-transition {
+  navigation: auto;
+}
+
+.topbar {
+  view-transition-name: site-bar;
+}
+
+::view-transition-old(root) {
+  animation: 180ms ease both vt-out;
+}
+
+::view-transition-new(root) {
+  animation: 320ms cubic-bezier(0.2, 0.7, 0.2, 1) both vt-in;
+}
+
+@keyframes vt-out {
+  to { opacity: 0; transform: translateY(-8px); }
+}
+
+@keyframes vt-in {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: none; }
+}
+
+.page-hero,
+.section,
+.site-foot {
+  animation: rise 0.45s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.section:nth-child(2) { animation-delay: 0.06s; }
+.section:nth-child(3) { animation-delay: 0.1s; }
+
+.game-card,
+.art-tile,
+.award,
+.skill,
+.job,
+.case,
+.text-btn,
+.btn,
+.filters button,
+.nav-tools a,
+.theme-toggle,
+.site-nav a {
+  transition: transform 0.2s ease, background-color 0.35s ease, color 0.35s ease, border-color 0.35s ease, box-shadow 0.2s ease;
+}
+
+body,
+.topbar,
+.page-hero,
+.now,
+.replay,
+.site-foot {
+  transition: background-color 0.35s ease, color 0.35s ease, border-color 0.35s ease;
+}
+
+.game-card:hover,
+.art-tile:hover,
+.award:hover,
+.skill:hover {
+  transform: translateY(-4px);
+}
+
+.game-shot img {
+  transition: transform 0.45s ease;
+}
+
+.game-card:hover .game-shot img {
+  transform: scale(1.05);
+}
+
+.btn:active,
+.text-btn:active,
+.theme-toggle:active,
+.filters button:active {
+  transform: translateY(1px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  @view-transition {
+    navigation: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
 .theme-toggle {
   border: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.08);
-  color: #cdd6f4;
+  color: var(--ink);
   border-radius: 999px;
   padding: 6px 12px;
   font-size: 0.92rem;
@@ -823,7 +933,24 @@ html[data-theme="light"] .art-tile img,
 html[data-theme="light"] #viewer img {
   background: #e6e9ef;
 }
-html[data-theme="light"] .nav-toggle span,
+html[data-theme="light"] .game-card,
+html[data-theme="light"] .award,
+html[data-theme="light"] .job,
+html[data-theme="light"] .skill,
+html[data-theme="light"] .case,
+html[data-theme="light"] .now,
+html[data-theme="light"] .replay,
+html[data-theme="light"] .art-tile,
+html[data-theme="light"] .text-btn,
+html[data-theme="light"] .btn,
+html[data-theme="light"] .filters button,
+html[data-theme="light"] .nav-tools a,
+html[data-theme="light"] .theme-toggle,
+html[data-theme="light"] .now-points span,
+html[data-theme="light"] .btn-light,
+html[data-theme="light"] .btn-ghost {
+  border: 2px solid #1e1e2e;
+}
 html[data-theme="light"] .nav-toggle span:before,
 html[data-theme="light"] .nav-toggle span:after {
   background: #4c4f69;
