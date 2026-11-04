@@ -489,20 +489,37 @@ h3, .game-body h3, .job h3, .skill h2, .award h2, .concept h3 {
   border: 4px solid #fff;
   justify-self: center;
 }
+.home-hero > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  min-width: 0;
+}
 .home-hero h1 {
   text-transform: none;
+  text-align: left;
+  width: 100%;
   font-size: clamp(36px, 5vw, 64px);
   letter-spacing: 0;
   line-height: 1.05;
 }
+.page-hero .home-hero p,
+.page-hero .home-hero .role-line {
+  max-width: 62ch;
+  margin-left: 0;
+  margin-right: 0;
+  text-align: left;
+}
 .role-line {
-  margin-top: 8px;
+  margin-top: 0;
   color: var(--accent);
   font-weight: 800;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   font-size: 0.92rem;
 }
+.home-hero .hero-actions { justify-content: flex-start; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
 .btn {
   display: inline-flex;
