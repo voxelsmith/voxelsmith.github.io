@@ -1,484 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <title>Portfolio &mdash; Md. Fardoush Hassan</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700" rel="stylesheet">
-
-    <!-- CSS (same stack as index.html + your portfolio file) -->
-    <link rel="stylesheet" href="fonts/icomoon/style.css">
-
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <link rel="stylesheet" href="css/jquery-ui.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/lightgallery.min.css">
-    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
-    <link rel="stylesheet" href="css/swiper.css">
-    <link rel="stylesheet" href="css/Timeline.css">
-    <link rel="stylesheet" href="css/aos.css">
-
-    <!-- 2nd theme part -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/flexslider.css">
-    <link rel="stylesheet" href="fonts/icomoon/style.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/style2.css">
-
-    <!-- Small tweak to make project links look like clear buttons -->
-    <style>
-        .project-links {
-            margin-top: 0.75rem;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        .project-links .btn-project {
-            font-size: 0.85rem;
-            padding: 0.4rem 1rem;
-            border-radius: 999px;
-            /* pill shape */
-            border: 1px solid rgba(255, 255, 255, 0.35);
-            background: rgba(255, 255, 255, 0.04);
-            color: #ffffff;
-            text-transform: uppercase;
-            letter-spacing: 0.04em;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            white-space: nowrap;
-            transition: all 0.2s ease;
-        }
-
-        .project-links .btn-project:hover {
-            background: #ffffff;
-            color: #111111;
-            text-decoration: none;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-            transform: translateY(-1px);
-        }
-
-        /* Optional: make buttons stack on very small screens */
-        @media (max-width: 480px) {
-            .project-links {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .project-links .btn-project {
-                width: 100%;
-                justify-content: center;
-            }
-        }
-
-        .nav-email-text {
-            text-align: right;
-            margin-bottom: 4px;
-        }
-
-        .nav-email-text a {
-            color: #ffffff;
-            font-size: 0.8rem;
-            text-decoration: none;
-            white-space: normal;
-            /* allow wrapping if needed */
-        }
-
-        .nav-email-text a:hover {
-            text-decoration: underline;
-        }
-
-        .nav-email-text .icon-envelope {
-            margin-right: 4px;
-            vertical-align: middle;
-        }
-
-        .nav-email-text .email-full {
-            vertical-align: middle;
-        }
-
-        /* Keep navbar black even after scroll */
-        .site-navbar.scrolled {
-            background-color: #000000 !important;
-        }
-
-        .site-navbar.scrolled .site-menu>li>a {
-            color: #ffffff !important;
-        }
-
-        /* Social + mobile icons stay visible on dark background */
-        .site-navbar.scrolled .icon-menu,
-        .site-navbar.scrolled .icon-close2,
-        .site-navbar.scrolled .icon-facebook,
-        .site-navbar.scrolled .icon-linkedin,
-        .site-navbar.scrolled .icon-instagram,
-        .site-navbar.scrolled .icon-youtube-play {
-            color: #ffffff !important;
-        }
-    </style>
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    (function () {
+      var saved = localStorage.getItem("theme");
+      document.documentElement.setAttribute("data-theme", saved === "dark" ? "dark" : "light");
+    })();
+  </script>
+  <title>Portfolio — Fardoush Hassan Himu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Sora:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/look.css?v=4">
 </head>
-
 <body>
+  <header class="topbar">
+    <a class="brand" href="index.html">Fardoush Hassan</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span></span>
+      <span class="sr-only">Menu</span>
+    </button>
+    <nav id="site-nav" class="site-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="highlights.html">Highlights</a>
+      <a href="portfolio.html" class="is-current">Portfolio</a>
+      <a href="myContributions.html">Project Showcase</a>
+      <a href="art.html">Voxel Art</a>
+      <a href="mySkills.html">My Skills</a>
+    </nav>
+    <div class="nav-tools">
+      <button class="theme-toggle" type="button" aria-pressed="false">Light</button>
+      <a href="mailto:fardoush.hassan82271@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/md-fardoush-hassan/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </header>
 
-    <div class="site-wrap">
+  <section class="page-hero">
+    <h1>Portfolio</h1>
+    <p>Click a store link to play a game, or open Project Showcase to read what I built on it.</p>
+    <ul class="legend">
+      <li><span class="dot white"></span> On a store</li>
+      <li><span class="dot green"></span> Personal project</li>
+      <li><span class="dot blue"></span> Professional work</li>
+      <li><span class="dot"></span> Beta</li>
+    </ul>
+  </section>
 
-        <!-- Mobile menu (same as index.html) -->
-        <div class="site-mobile-menu">
-            <div class="site-mobile-menu-header">
-                <div class="site-mobile-menu-close mt-3">
-                    <span class="icon-close2 js-menu-toggle"></span>
-                </div>
+  <main>
+    <section class="section">
+      <div class="wrap">
+        <h2>Featured</h2>
+        <div class="featured-grid cols-3">
+          <article class="game-card">
+            <div class="game-shot">
+              <img src="images/rust/key-art.png" alt="Rust Rampage">
+              <span class="badge badge-personal">Personal</span>
+              <span class="badge badge-feature">Now</span>
             </div>
-            <div class="site-mobile-menu-body"></div>
+            <div class="game-body">
+              <h3>Rust Rampage (Beta)</h3>
+              <p class="game-meta">GameBanai · Open world vehicle combat</p>
+              <div class="tags"><span>Fight</span><span>Build</span><span>Upgrade</span><span>Storms</span></div>
+              <div class="game-links">
+                <a class="text-btn" href="https://play.google.com/store/apps/details?id=com.GameBanai.RustRampage" target="_blank" rel="noopener">Play Store</a>
+                <a class="text-btn" href="https://testflight.apple.com/join/JTwbRMvD" target="_blank" rel="noopener">TestFlight</a>
+                <a class="text-btn" href="index.html#rust-rampage">Currently working on</a>
+              </div>
+            </div>
+          </article>
+          <article class="game-card">
+            <div class="game-shot">
+              <img src="images/wynnSlots.png" alt="Wynn Slots">
+              <span class="badge badge-pro">Professional</span>
+              <span class="badge badge-feature">Featured</span>
+            </div>
+            <div class="game-body">
+              <h3>Wynn Slots</h3>
+              <p class="game-meta">Torpedo Labs · Mobile</p>
+              <div class="tags"><span>Unity</span><span>UI</span><span>Shaders</span></div>
+              <div class="game-links">
+                <a class="text-btn" href="https://play.google.com/store/apps/details?id=com.torpedolabs.wynn.slots&hl=en" target="_blank" rel="noopener">Play Store</a>
+                <a class="text-btn" href="https://apps.apple.com/us/app/wynn-slots-las-vegas-casino/id1323336775" target="_blank" rel="noopener">App Store</a>
+              </div>
+            </div>
+          </article>
+          <article class="game-card">
+            <div class="game-shot">
+              <img src="images/aerthlings.png" alt="Aerthlings">
+              <span class="badge badge-pro">Professional</span>
+              <span class="badge badge-feature">Featured</span>
+            </div>
+            <div class="game-body">
+              <h3>Aerthlings</h3>
+              <p class="game-meta">Modern Games Inc · Mobile</p>
+              <div class="tags"><span>Unity</span><span>Voxel</span><span>Design</span></div>
+              <div class="game-links">
+                <a class="text-btn" href="https://play.google.com/store/apps/details?id=com.moderngames.aerthlings&hl=en" target="_blank" rel="noopener">Play Store</a>
+                <a class="text-btn" href="https://apps.apple.com/us/app/aerthlings/id6449201808" target="_blank" rel="noopener">App Store</a>
+                <a class="text-btn" href="myContributions.html#aerthlings">Read the build story</a>
+              </div>
+            </div>
+          </article>
         </div>
+      </div>
+    </section>
 
-        <!-- NAVBAR: exact copy from index.html -->
-        <header class="site-navbar py-3" role="banner">
-            <div class="container-fluid">
-                <div class="row align-items-center">
-
-                    <div class="col-6 col-xl-2" data-aos="fade-down">
-                        <h1 class="mb-0">
-                            <a href="index.html" class="text-white h2 mb-0"></a>
-                        </h1>
-                    </div>
-
-                    <div class="col-10 col-md-8 d-none d-xl-block" data-aos="fade-down">
-                        <nav class="site-navigation position-relative text-right text-lg-center" role="navigation">
-                            <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
-                                <li><a href="index.html">Home</a></li>
-                                <li class="active"><a href="portfolio.html">Portfolio</a></li>
-                                <li class="active"><a href="myContributions.html">Project Showcase</a></li>
-                                <li><a href="mySkills.html">My Skills</a></li>
-                            </ul>
-
-                        </nav>
-                    </div>
-
-
-                    <div class="col-6 col-xl-2 text-right" data-aos="fade-down">
-
-                        <!-- Desktop: email on its own line, full text -->
-                        <div class="d-none d-xl-inline-block">
-                            <div class="nav-email-text">
-                                <a href="mailto:fardoush.hassan82271@gmail.com" id="nav-email-link">
-                                    <span class="icon-envelope"></span>
-                                    <span class="email-full"> fardoush.hassan82271@gmail.com</span>
-                                </a>
-                            </div>
-
-                            <ul class="site-menu js-clone-nav ml-auto list-unstyled d-flex text-right mb-0"
-                                data-class="social">
-                                <!-- <li>
-                                    <a href="https://www.facebook.com/hassan.himzz" target="_blank" class="pl-0 pr-3">
-                                        <span class="icon-facebook"></span>
-                                    </a>
-                                </li> -->
-                                <li>
-                                    <a href="https://www.linkedin.com/in/md-fardoush-hassan/" target="_blank"
-                                        class="pl-0 pr-3">
-                                        <span class="icon-linkedin"></span>
-                                    </a>
-                                </li>
-                                <!-- <li>
-                                    <a href="https://www.instagram.com/?hl=en" target="_blank" class="pl-3 pr-3">
-                                        <span class="icon-instagram"></span>
-                                    </a>
-                                </li> -->
-                                <li>
-                                    <a href="https://www.youtube.com/channel/UCMb7AAhzo5HtcWAdxNUkHGg" target="_blank"
-                                        class="pl-3 pr-3">
-                                        <span class="icon-youtube-play"></span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <!-- Mobile: keep just an icon or short text inside menu toggle area if you want later -->
-                        <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3"
-                            style="position: relative; top: 3px;">
-                            <a href="#" class="site-menu-toggle js-menu-toggle text-black">
-                                <span class="icon-menu h3"></span>
-                            </a>
-                        </div>
-                    </div>
-
-
+    <section class="section">
+      <div class="wrap">
+        <h2>All games</h2>
+        <div class="filters" role="group" aria-label="Filter by kind">
+          <button type="button" data-filter="all" aria-pressed="true">All <span class="count">7</span></button>
+          <button type="button" data-filter="professional" aria-pressed="false">Professional <span class="count">6</span></button>
+          <button type="button" data-filter="personal" aria-pressed="false">Personal <span class="count">1</span></button>
+        </div>
+        <div class="catalog">
+          <div>
+            <div class="game-grid" id="game-grid">
+              <article class="game-card" id="rust-rampage" data-cat="personal" data-tags="mobile voxel beta">
+                <div class="game-shot">
+                  <img src="images/rust/key-art.png" alt="Rust Rampage">
+                  <span class="badge badge-personal">Personal</span>
                 </div>
+                <div class="game-body">
+                  <h3>Rust Rampage (Beta)</h3>
+                  <p class="game-meta">Solo · Mobile</p>
+                  <div class="tags"><span>Unity</span><span>Voxel</span><span>Beta</span></div>
+                  <div class="game-links">
+                    <a class="text-btn" href="https://play.google.com/store/apps/details?id=com.GameBanai.RustRampage" target="_blank" rel="noopener">Play Store</a>
+                    <a class="text-btn" href="https://testflight.apple.com/join/JTwbRMvD" target="_blank" rel="noopener">TestFlight</a>
+                    <a class="text-btn" href="myContributions.html#rust-rampage">Build story</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="game-card" id="combat-rover" data-cat="professional" data-tags="pc voxel beta">
+                <div class="game-shot">
+                  <img src="images/COmbatRover.jpg" alt="Combat Rover: Operation Storm">
+                  <span class="badge badge-pro">Professional</span>
+                </div>
+                <div class="game-body">
+                  <h3>Combat Rover: Operation Storm (Beta)</h3>
+                  <p class="game-meta">Arclite Systems · PC / Steam</p>
+                  <div class="tags"><span>Unity</span><span>PC</span><span>Beta</span></div>
+                  <div class="game-links">
+                    <a class="text-btn" href="https://store.steampowered.com/app/3153200/Combat_Rover_Operation_Storm/" target="_blank" rel="noopener">Steam</a>
+                    <a class="text-btn" href="myContributions.html#combat-rover">Build story</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="game-card" id="holobike" data-cat="professional" data-tags="mobile voxel">
+                <div class="game-shot">
+                  <img src="images/Holobike.jpg" alt="Holobike 3D">
+                  <span class="badge badge-pro">Professional</span>
+                </div>
+                <div class="game-body">
+                  <h3>Holobike 3D</h3>
+                  <p class="game-meta">Arclite Systems · Mobile</p>
+                  <div class="tags"><span>Unity</span><span>Mobile</span><span>Voxel</span></div>
+                  <div class="game-links">
+                    <a class="text-btn" href="https://play.google.com/store/apps/details?id=com.ArcSys.Holobike&hl=en" target="_blank" rel="noopener">Play Store</a>
+                    <a class="text-btn" href="https://apps.apple.com/us/app/holobike-3d/id6477530630" target="_blank" rel="noopener">App Store</a>
+                    <a class="text-btn" href="myContributions.html#holobike-3d">Build story</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="game-card" id="air-hockey" data-cat="professional" data-tags="mobile">
+                <div class="game-shot">
+                  <img src="images/airHckey.jpg" alt="Air Hockey Glow">
+                  <span class="badge badge-pro">Professional</span>
+                </div>
+                <div class="game-body">
+                  <h3>Air Hockey Glow</h3>
+                  <p class="game-meta">Arclite Systems · Mobile</p>
+                  <div class="tags"><span>Unity</span><span>Mobile</span></div>
+                  <div class="game-links">
+                    <a class="text-btn" href="https://play.google.com/store/apps/details?id=com.air.hockey.glow.hd&pcampaignid=web_share" target="_blank" rel="noopener">Play Store</a>
+                    <a class="text-btn" href="https://apps.apple.com/us/app/air-hockey-glow-hd-arcade-2d/id1549140064" target="_blank" rel="noopener">App Store</a>
+                    <a class="text-btn" href="myContributions.html#air-hockey-glow">Build story</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="game-card" id="wynn-slots" data-cat="professional" data-tags="mobile">
+                <div class="game-shot">
+                  <img src="images/wynnSlots.png" alt="Wynn Slots">
+                  <span class="badge badge-pro">Professional</span>
+                </div>
+                <div class="game-body">
+                  <h3>Wynn Slots</h3>
+                  <p class="game-meta">Torpedo Labs · Mobile</p>
+                  <div class="tags"><span>Unity</span><span>Mobile</span><span>Shaders</span></div>
+                  <div class="game-links">
+                    <a class="text-btn" href="https://play.google.com/store/apps/details?id=com.torpedolabs.wynn.slots&hl=en" target="_blank" rel="noopener">Play Store</a>
+                    <a class="text-btn" href="https://apps.apple.com/us/app/wynn-slots-las-vegas-casino/id1323336775" target="_blank" rel="noopener">App Store</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="game-card" id="two-pics" data-cat="professional" data-tags="mobile">
+                <div class="game-shot">
+                  <img src="images/2Pics1Word.jpg" alt="2 Pics 1 Word">
+                  <span class="badge badge-pro">Professional</span>
+                </div>
+                <div class="game-body">
+                  <h3>2 Pics 1 Word</h3>
+                  <p class="game-meta">Solo office project · Mobile</p>
+                  <div class="tags"><span>Unity</span><span>Mobile</span></div>
+                  <div class="game-links">
+                    <a class="text-btn" href="https://play.google.com/store/apps/details?id=com.arcsys.two.pic.one.word&pcampaignid=web_share" target="_blank" rel="noopener">Play Store</a>
+                    <a class="text-btn" href="https://apps.apple.com/us/app/4-pics-1-word-fun-quiz-games/id6444666987" target="_blank" rel="noopener">App Store</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="game-card" id="aerthlings" data-cat="professional" data-tags="mobile voxel">
+                <div class="game-shot">
+                  <img src="images/aerthlings.png" alt="Aerthlings">
+                  <span class="badge badge-pro">Professional</span>
+                </div>
+                <div class="game-body">
+                  <h3>Aerthlings</h3>
+                  <p class="game-meta">Modern Games Inc · Mobile</p>
+                  <div class="tags"><span>Unity</span><span>Voxel</span><span>Mobile</span></div>
+                  <div class="game-links">
+                    <a class="text-btn" href="https://play.google.com/store/apps/details?id=com.moderngames.aerthlings&hl=en" target="_blank" rel="noopener">Play Store</a>
+                    <a class="text-btn" href="https://apps.apple.com/us/app/aerthlings/id6449201808" target="_blank" rel="noopener">App Store</a>
+                    <a class="text-btn" href="myContributions.html#aerthlings">Build story</a>
+                  </div>
+                </div>
+              </article>
             </div>
-        </header>
+            <p class="empty-note" id="empty-note" hidden>No projects match these filters.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-        <!-- Main portfolio section (your game projects) -->
-        <section class="site-section" id="section-portfolio">
-            <div class="container">
-
-                <!-- Filters -->
-                <div class="filters">
-                    <ul>
-                        <li class="active" data-filter="*">All</li>
-                        <li data-filter=".Personal">My Solo Projects</li>
-                        <li data-filter=".Office">Professional Projects</li>
-
-                    </ul>
-                </div>
-
-                <!-- Grid -->
-                <div class="filters-content">
-                    <div class="row grid">
-
-                        <!-- Rust Rampage (Beta) – Solo personal project -->
-                        <div class="single-portfolio col-sm-4 all Personal Mobile">
-                            <div class="relative">
-                                <div class="thumb">
-                                    <div class="overlay overlay-bg"></div>
-                                    <img class="image img-fluid" src="images/RR.png" alt="Rust Rampage thumbnail">
-                                </div>
-                                <!-- Removed clickable link around image -->
-                                <div class="middle">
-                                    <div class="text align-self-center d-flex">
-                                        <img src="images/preview.png" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="p-inner">
-                                <h4>Rust Rampage (Beta)</h4>
-                                <div class="cat">Personal · Mobile</div>
-                                <div class="project-links">
-                                    <a href="https://play.google.com/store/apps/details?id=com.GameBanai.RustRampage"
-                                        target="_blank" class="btn-project">Play Store</a>
-                                    <a href="https://testflight.apple.com/join/JTwbRMvD" target="_blank"
-                                        class="btn-project">TestFlight (iOS)</a>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <!-- Combat Rover Operation Storm (Beta) – Steam / Arclite Systems -->
-                        <div class="single-portfolio col-sm-4 all Office Mobile">
-                            <div class="relative">
-                                <div class="thumb">
-                                    <div class="overlay overlay-bg"></div>
-                                    <img class="image img-fluid" src="images/COmbatRover.jpg"
-                                        alt="Combat Rover thumbnail">
-                                </div>
-                                <!-- Removed clickable link around image -->
-                                <div class="middle">
-                                    <div class="text align-self-center d-flex">
-                                        <img src="images/preview.png" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="p-inner">
-                                <h4>Combat Rover: Operation Storm (Beta)</h4>
-                                <div class="cat">Office · PC / Steam</div>
-                                <div class="project-links">
-                                    <a href="https://store.steampowered.com/app/3153200/Combat_Rover_Operation_Storm/"
-                                        target="_blank" class="btn-project">Steam Store</a>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <!-- Holobike 3D – Arclite Systems -->
-                        <div class="single-portfolio col-sm-4 all Office Mobile">
-                            <div class="relative">
-                                <div class="thumb">
-                                    <div class="overlay overlay-bg"></div>
-                                    <img class="image img-fluid" src="images/Holobike.jpg" alt="Holobike 3D thumbnail">
-                                </div>
-                                <!-- Removed clickable link around image -->
-                                <div class="middle">
-                                    <div class="text align-self-center d-flex">
-                                        <img src="images/preview.png" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="p-inner">
-                                <h4>Holobike 3D</h4>
-                                <div class="cat">Office · Mobile</div>
-                                <div class="project-links">
-                                    <a href="https://play.google.com/store/apps/details?id=com.ArcSys.Holobike&hl=en"
-                                        target="_blank" class="btn-project">Play Store</a>
-
-                                    <a href="https://apps.apple.com/us/app/holobike-3d/id6477530630" target="_blank"
-                                        class="btn-project">App Store</a>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <!-- Air Hockey Glow – Arclite Systems -->
-                        <div class="single-portfolio col-sm-4 all Office Mobile">
-                            <div class="relative">
-                                <div class="thumb">
-                                    <div class="overlay overlay-bg"></div>
-                                    <img class="image img-fluid" src="images/airHckey.jpg"
-                                        alt="Air Hockey Glow thumbnail">
-                                </div>
-                                <!-- Removed clickable link around image -->
-                                <div class="middle">
-                                    <div class="text align-self-center d-flex">
-                                        <img src="images/preview.png" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="p-inner">
-                                <h4>Air Hockey Glow</h4>
-                                <div class="cat">Office · Mobile</div>
-                                <div class="project-links">
-                                    <a href="https://play.google.com/store/apps/details?id=com.air.hockey.glow.hd&pcampaignid=web_share"
-                                        target="_blank" class="btn-project">Play Store</a>
-
-                                    <a href="https://apps.apple.com/us/app/air-hockey-glow-hd-arcade-2d/id1549140064"
-                                        target="_blank" class="btn-project">App Store</a>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <!-- Wynn Slots – Torpedo Labs -->
-                        <div class="single-portfolio col-sm-4 all Office Mobile">
-                            <div class="relative">
-                                <div class="thumb">
-                                    <div class="overlay overlay-bg"></div>
-                                    <img class="image img-fluid" src="images/wynnSlots.png" alt="Wynn Slots thumbnail">
-                                </div>
-                                <!-- Removed clickable link around image -->
-                                <div class="middle">
-                                    <div class="text align-self-center d-flex">
-                                        <img src="images/preview.png" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="p-inner">
-                                <h4>Wynn Slots</h4>
-                                <div class="cat">Office · Mobile</div>
-                                <div class="project-links">
-                                    <a href="https://play.google.com/store/apps/details?id=com.torpedolabs.wynn.slots&hl=en"
-                                        target="_blank" class="btn-project">Play Store</a>
-
-                                    <a href="https://apps.apple.com/us/app/wynn-slots-las-vegas-casino/id1323336775"
-                                        target="_blank" class="btn-project">App Store</a>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <!-- 2 Pics 1 Word – Solo office project -->
-                        <div class="single-portfolio col-sm-4 all Office Mobile">
-                            <div class="relative">
-                                <div class="thumb">
-                                    <div class="overlay overlay-bg"></div>
-                                    <img class="image img-fluid" src="images/2Pics1Word.jpg"
-                                        alt="2 Pics 1 Word thumbnail">
-                                </div>
-                                <!-- Removed clickable link around image -->
-                                <div class="middle">
-                                    <div class="text align-self-center d-flex">
-                                        <img src="images/preview.png" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="p-inner">
-                                <h4>2 Pics 1 Word</h4>
-                                <div class="cat">Solo Office · Mobile</div>
-                                <div class="project-links">
-                                    <a href="https://play.google.com/store/apps/details?id=com.arcsys.two.pic.one.word&pcampaignid=web_share"
-                                        target="_blank" class="btn-project">Play Store</a>
-
-                                    <a href="https://apps.apple.com/us/app/4-pics-1-word-fun-quiz-games/id6444666987"
-                                        target="_blank" class="btn-project">App Store</a>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <!-- AERTHLINGS – Modern Games Inc -->
-                        <div class="single-portfolio col-sm-4 all Office Mobile">
-                            <div class="relative">
-                                <div class="thumb">
-                                    <div class="overlay overlay-bg"></div>
-                                    <img class="image img-fluid" src="images/aerthlings.png" alt="Aerthlings thumbnail">
-                                </div>
-                                <!-- Removed clickable link around image -->
-                                <div class="middle">
-                                    <div class="text align-self-center d-flex">
-                                        <img src="images/preview.png" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="p-inner">
-                                <h4>AERTHLINGS</h4>
-                                <div class="cat">Office · Mobile</div>
-                                <div class="project-links">
-                                    <a href="https://play.google.com/store/apps/details?id=com.moderngames.aerthlings&hl=en"
-                                        target="_blank" class="btn-project">Play Store</a>
-                                </div>
-
-                            </div>
-                        </div>
-
-                    </div> <!-- /.row.grid -->
-                </div> <!-- /.filters-content -->
-            </div> <!-- /.container -->
-        </section>
-
-    </div> <!-- /.site-wrap -->
-
-    <!-- Scripts (same stack as index.html so everything works) -->
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/jquery-migrate-3.0.1.min.js"></script>
-    <script src="js/jquery-ui.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.stellar.min.js"></script>
-    <script src="js/jquery.countdown.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/bootstrap-datepicker.min.js"></script>
-    <script src="js/swiper.min.js"></script>
-    <script src="js/aos.js"></script>
-
-    <script src="js/picturefill.min.js"></script>
-    <script src="js/lightgallery-all.min.js"></script>
-    <script src="js/jquery.mousewheel.min.js"></script>
-
-    <script src="js/main.js"></script>
-
-    <script>
-        $(document).ready(function () {
-            $('#lightgallery').lightGallery();
-        });
-    </script>
-
-    <!-- Isotope + imagesLoaded + custom filters (as in index.html) -->
-    <script src="js/vendor/jquery.min.js"></script>
-    <script src="js/vendor/jquery-migrate-3.0.1.min.js"></script>
-    <script src="js/vendor/popper.min.js"></script>
-    <script src="js/vendor/bootstrap.min.js"></script>
-
-    <script src="js/vendor/jquery.easing.1.3.js"></script>
-
-    <script src="js/vendor/jquery.stellar.min.js"></script>
-    <script src="js/vendor/jquery.waypoints.min.js"></script>
-
-    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
-    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-    <script src="js/custom.js"></script>
-
+  <footer class="site-foot">
+    <div class="wrap">
+      <div>
+        <strong>Fardoush Hassan Himu</strong>
+        <p>Shipped games, personal prototypes, and the work behind them.</p>
+      </div>
+      <div class="foot-links">
+        <a href="myContributions.html">Project Showcase</a>
+        <a href="mySkills.html">My Skills</a>
+        <a href="mailto:fardoush.hassan82271@gmail.com">Email</a>
+      </div>
+    </div>
+  </footer>
+  <script src="js/look.js?v=2"></script>
 </body>
-
 </html>

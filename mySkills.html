@@ -1,264 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<style>
-  .nav-email-text {
-    text-align: right;
-    margin-bottom: 4px;
-  }
-
-  .nav-email-text a {
-    color: #ffffff;
-    font-size: 0.8rem;
-    text-decoration: none;
-    white-space: normal;
-    /* allow wrapping if needed */
-  }
-
-  .nav-email-text a:hover {
-    text-decoration: underline;
-  }
-
-  .nav-email-text .icon-envelope {
-    margin-right: 4px;
-    vertical-align: middle;
-  }
-
-  .nav-email-text .email-full {
-    vertical-align: middle;
-  }
-</style>
-
-
 <head>
-  <title>Portfolio &mdash; Md. Fardoush Hassan</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <!-- Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap"
-    rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700" rel="stylesheet">
-
-  <!-- CSS (same stack as index.html + your portfolio file) -->
-  <link rel="stylesheet" href="fonts/icomoon/style.css">
-
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/magnific-popup.css">
-  <link rel="stylesheet" href="css/jquery-ui.css">
-  <link rel="stylesheet" href="css/owl.carousel.min.css">
-  <link rel="stylesheet" href="css/owl.theme.default.min.css">
-  <link rel="stylesheet" href="css/lightgallery.min.css">
-  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-  <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
-  <link rel="stylesheet" href="css/swiper.css">
-  <link rel="stylesheet" href="css/Timeline.css">
-  <link rel="stylesheet" href="css/aos.css">
-
-  <!-- 2nd theme part -->
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/animate.css">
-  <link rel="stylesheet" href="css/flexslider.css">
-  <link rel="stylesheet" href="fonts/icomoon/style.css">
-  <link rel="stylesheet" href="css/bootstrap.css">
-  <link rel="stylesheet" href="css/style2.css">
-</head>
-
-<body>
-
-  <div class="site-wrap">
-
-    <!-- Mobile menu (same structure as index.html) -->
-    <div class="site-mobile-menu">
-      <div class="site-mobile-menu-header">
-        <div class="site-mobile-menu-close mt-3">
-          <span class="icon-close2 js-menu-toggle"></span>
-        </div>
-      </div>
-      <div class="site-mobile-menu-body"></div>
-    </div>
-
-    <!-- NAVBAR: copied from index.html, with "My Skills" active -->
-    <header class="site-navbar py-3" role="banner">
-      <div class="container-fluid">
-        <div class="row align-items-center">
-
-          <div class="col-6 col-xl-2" data-aos="fade-down">
-            <h1 class="mb-0">
-              <a href="index.html" class="text-white h2 mb-0"></a>
-            </h1>
-          </div>
-          <div class="col-10 col-md-8 d-none d-xl-block" data-aos="fade-down">
-            <nav class="site-navigation position-relative text-right text-lg-center" role="navigation">
-              <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
-                <li><a href="index.html">Home</a></li>
-                <li class="active"><a href="portfolio.html">Portfolio</a></li>
-                <li class="active"><a href="myContributions.html">Project Showcase</a></li>
-                <li><a href="mySkills.html">My Skills</a></li>
-              </ul>
-
-            </nav>
-          </div>
-
-
-
-          <div class="col-6 col-xl-2 text-right" data-aos="fade-down">
-
-            <!-- Desktop: email on its own line, full text -->
-            <div class="d-none d-xl-inline-block">
-              <div class="nav-email-text">
-                <a href="mailto:fardoush.hassan82271@gmail.com" id="nav-email-link">
-                  <span class="icon-envelope"></span>
-                  <span class="email-full"> fardoush.hassan82271@gmail.com</span>
-                </a>
-              </div>
-
-              <ul class="site-menu js-clone-nav ml-auto list-unstyled d-flex text-right mb-0" data-class="social">
-                <!-- <li>
-                                    <a href="https://www.facebook.com/hassan.himzz" target="_blank" class="pl-0 pr-3">
-                                        <span class="icon-facebook"></span>
-                                    </a>
-                                </li> -->
-                <li>
-                  <a href="https://www.linkedin.com/in/md-fardoush-hassan/" target="_blank" class="pl-0 pr-3">
-                    <span class="icon-linkedin"></span>
-                  </a>
-                </li>
-                <!-- <li>
-                                    <a href="https://www.instagram.com/?hl=en" target="_blank" class="pl-3 pr-3">
-                                        <span class="icon-instagram"></span>
-                                    </a>
-                                </li> -->
-                <li>
-                  <a href="https://www.youtube.com/channel/UCMb7AAhzo5HtcWAdxNUkHGg" target="_blank" class="pl-3 pr-3">
-                    <span class="icon-youtube-play"></span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <!-- Mobile: keep just an icon or short text inside menu toggle area if you want later -->
-            <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;">
-              <a href="#" class="site-menu-toggle js-menu-toggle text-black">
-                <span class="icon-menu h3"></span>
-              </a>
-            </div>
-          </div>
-
-        </div>
-    </header>
-
-    <!-- Your Skills Section (unchanged) -->
-    <div class="site-section" data-aos="fade">
-      <div class="container-fluid">
-
-        <div class="row justify-content-center">
-          <div class="col-md-7">
-            <div class="row mb-5">
-              <div class="col-12">
-                <h2 class="site-section-heading text-center">My Skills</h2>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-6 col-lg-6 col-xl-4 text-center mb-5 mb-lg-5">
-            <div class="h-100 p-4 p-lg-5 site-block-feature-7">
-              <span><img src="https://img.icons8.com/wired/64/000000/unity.png" /></span>
-              <h3 class="text-white h4">Unity Game Developement</h3>
-              <p>Game developement is one of my main interests. By using Unity game engine, I have experience in making
-                2D side scrollers and 3D adventure type games. It's not a one man job but I try my best to make
-                something fun</p>
-              <p><strong class="font-weight-bold text-primary">Game Engine: Unity3D</strong></p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-6 col-xl-4 text-center mb-5 mb-lg-5">
-            <div class="h-100 p-4 p-lg-5 site-block-feature-7">
-              <img src="images/magicavoxel.png" style="width:160px; height:auto;" /><br>
-              <h3 class="text-white h4">Magicavoxel</h3>
-              <p>As an Indie game developer, making own model is fun. I have experience in modeling low poly assets for
-                my projects. Still learning and having fun creating random stuff</p>
-              <p><strong class="font-weight-bold text-primary">Software: Magicevoxel</strong></p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-6 col-xl-4 text-center mb-5 mb-lg-5">
-            <div class="h-100 p-4 p-lg-5 site-block-feature-7">
-              <img src="images/voxedit.png" style="width:120px; height:auto;" class="mb-4" /><br>
-              <h3 class="text-white h4">VoxEdit Animation</h3>
-              <p>
-                I create voxel-based character and object animations using VoxEdit.
-                This includes rigging, keyframe animation, and building optimized voxel assets
-                suitable for games, cinematics, and interactive experiences.
-                I enjoy bringing stylized voxel characters to life through expressive and fluid motion.
-              </p>
-              <p>
-                <strong class="font-weight-bold text-primary">Software: VoxEdit</strong>
-              </p>
-            </div>
-          </div>
-
-
-          <div class="col-md-6 col-lg-6 col-xl-4 text-center mb-5 mb-lg-5">
-            <div class="h-100 p-4 p-lg-5 site-block-feature-7">
-              <span>
-                <img src="https://img.icons8.com/color/48/000000/adobe-premiere-pro.png" />
-                <img src="https://img.icons8.com/color/48/000000/adobe-after-effects.png" />
-              </span>
-              <h3 class="text-white h4">Video Editing</h3>
-              <p>Editing a video can be time consuming, but the end product is always something magical. A few cuts here
-                and there can make a wonderful story and I'm a storyteller through my edits</p>
-              <p><strong class="font-weight-bold text-primary">Software:Premier pro, Aftereffects</strong></p>
-            </div>
-          </div>
-
-
-          <div class="col-md-6 col-lg-6 col-xl-4 text-center mb-5 mb-lg-5">
-            <div class="h-100 p-4 p-lg-5 site-block-feature-7">
-              <span><img src="https://img.icons8.com/color/48/000000/code.png" /></span>
-              <h3 class="text-white h4">Problem Solver</h3>
-              <p>I love facing challanges cause it drives me to learn something new.Problem solving through code is no
-                different.Sometimes you hit a dead end but,you'll never find a solve untill you keep trying again and
-                again</p>
-              <p><strong class="font-weight-bold text-primary">Langiage: Java,C#,PHP,MySQL,Javascript</strong></p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-  </div> <!-- /.site-wrap -->
-
-  <!-- Scripts -->
-  <script src="js/jquery-3.3.1.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/jquery-ui.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/jquery.countdown.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/bootstrap-datepicker.min.js"></script>
-  <script src="js/swiper.min.js"></script>
-  <script src="js/aos.js"></script>
-
-  <script src="js/picturefill.min.js"></script>
-  <script src="js/lightgallery-all.min.js"></script>
-  <script src="js/jquery.mousewheel.min.js"></script>
-
-  <script src="js/main.js"></script>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <script>
-    $(document).ready(function () {
-      $('#lightgallery').lightGallery();
-    });
+    (function () {
+      var saved = localStorage.getItem("theme");
+      document.documentElement.setAttribute("data-theme", saved === "dark" ? "dark" : "light");
+    })();
   </script>
+  <title>My Skills — Fardoush Hassan Himu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Sora:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/look.css?v=4">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html">Fardoush Hassan</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span></span>
+      <span class="sr-only">Menu</span>
+    </button>
+    <nav id="site-nav" class="site-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="highlights.html">Highlights</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="myContributions.html">Project Showcase</a>
+      <a href="art.html">Voxel Art</a>
+      <a href="mySkills.html" class="is-current">My Skills</a>
+    </nav>
+    <div class="nav-tools">
+      <button class="theme-toggle" type="button" aria-pressed="false">Light</button>
+      <a href="mailto:fardoush.hassan82271@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/md-fardoush-hassan/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </header>
 
-  <a href="https://icons8.com/icon/n60Mt4wRAUlo/blender-3d"></a>
+  <section class="page-hero">
+    <h1>My Skills</h1>
+    <p>The tools I use to ship games: Unity, voxel art, animation, editing, and code.</p>
+  </section>
+
+  <main class="section">
+    <div class="wrap skill-grid">
+      <article class="skill">
+        <img src="https://img.icons8.com/wired/64/000000/unity.png" alt="">
+        <h2>Unity game development</h2>
+        <p>Game development is one of my main interests. In Unity I have built 2D side scrollers and 3D adventure games. It is not a one-person job, but I try to make something fun.</p>
+        <p class="tool">Game engine: Unity</p>
+      </article>
+      <article class="skill">
+        <img src="images/magicavoxel.png" alt="">
+        <h2>MagicaVoxel</h2>
+        <p>As an indie developer, making my own models is part of the fun. I model low-poly assets for projects and keep learning by building small pieces on the side.</p>
+        <p class="tool">Software: MagicaVoxel</p>
+      </article>
+      <article class="skill">
+        <img src="images/voxedit.png" alt="">
+        <h2>VoxEdit animation</h2>
+        <p>I create voxel character and object animations in VoxEdit. That includes rigging, keyframe animation, and optimized voxel assets for games, cinematics, and interactive scenes.</p>
+        <p class="tool">Software: VoxEdit</p>
+      </article>
+      <article class="skill">
+        <img src="https://img.icons8.com/color/48/000000/adobe-premiere-pro.png" alt="">
+        <h2>Video editing</h2>
+        <p>Editing takes time, and the end result is where the story lands. A few cuts can turn footage into something worth watching, and that is how I treat trailers and captures.</p>
+        <p class="tool">Software: Premiere Pro, After Effects</p>
+      </article>
+      <article class="skill">
+        <img src="https://img.icons8.com/color/48/000000/code.png" alt="">
+        <h2>Problem solving</h2>
+        <p>I like hard problems because they push me to learn. Solving them in code is the same: a dead end just means the next attempt has to be more specific.</p>
+        <p class="tool">Languages: Java, C#, PHP, MySQL, JavaScript</p>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-foot">
+    <div class="wrap">
+      <div>
+        <strong>Fardoush Hassan Himu</strong>
+        <p>Tools and craft behind the portfolio.</p>
+      </div>
+      <div class="foot-links">
+        <a href="portfolio.html">Portfolio</a>
+        <a href="index.html">Home</a>
+        <a href="mailto:fardoush.hassan82271@gmail.com">Email</a>
+      </div>
+    </div>
+  </footer>
+  <script src="js/look.js?v=2"></script>
 </body>
-
 </html>

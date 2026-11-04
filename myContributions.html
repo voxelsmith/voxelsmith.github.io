@@ -1,733 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
-<style>
-  /* Keep navbar black even after scroll */
-  .site-navbar.scrolled {
-    background-color: #000000 !important;
-  }
-
-  .site-navbar.scrolled .site-menu>li>a {
-    color: #ffffff !important;
-  }
-
-  /* Social + mobile icons stay visible on dark background */
-  .site-navbar.scrolled .icon-menu,
-  .site-navbar.scrolled .icon-close2,
-  .site-navbar.scrolled .icon-facebook,
-  .site-navbar.scrolled .icon-linkedin,
-  .site-navbar.scrolled .icon-instagram,
-  .site-navbar.scrolled .icon-github,
-  .site-navbar.scrolled .icon-envelope {
-    color: #ffffff !important;
-  }
-
-  /* Desktop social icons: keep black (or make white if you want always white) */
-  .site-navbar .icon-envelope,
-  .site-navbar .icon-linkedin,
-  .site-navbar .icon-github {
-    color: #000000;
-  }
-
-  .site-navbar.scrolled .icon-envelope,
-  .site-navbar.scrolled .icon-linkedin,
-  .site-navbar.scrolled .icon-github {
-    color: #ffffff !important;
-  }
-
-  /* Make all links in the menu white */
-  .site-navbar .site-menu>li>a {
-    color: #ffffff !important;
-  }
-
-  /* Make the logo text white */
-  .site-navbar .site-logo a {
-    color: #ffffff !important;
-  }
-
-  /* Make social icons white */
-  .site-navbar .icon-envelope,
-  .site-navbar .icon-linkedin,
-  .site-navbar .icon-github {
-    color: #ffffff !important;
-  }
-
-  /* Optional: keep a subtle border bottom */
-  .site-navbar {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-  }
-
-  /* Optional: reduce padding for a tighter navbar */
-  .site-navbar {
-    padding-top: 12px !important;
-    padding-bottom: 12px !important;
-  }
-
-  /* If you have text email on top bar */
-  .nav-email-text {
-    text-align: right;
-    margin-bottom: 4px;
-  }
-
-  .nav-email-text a {
-    color: #ffffff;
-    font-size: 0.8rem;
-    text-decoration: none;
-    white-space: normal;
-    /* allow wrapping if needed */
-  }
-
-  .nav-email-text a:hover {
-    text-decoration: underline;
-  }
-</style>
-
 <head>
-  <title>Contributions &mdash; </title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap"
-    rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700" rel="stylesheet">
-  <link rel="stylesheet" href="fonts/icomoon/style.css">
-
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/magnific-popup.css">
-  <link rel="stylesheet" href="css/jquery-ui.css">
-  <link rel="stylesheet" href="css/owl.carousel.min.css">
-  <link rel="stylesheet" href="css/owl.theme.default.min.css">
-  <link rel="stylesheet" href="css/lightgallery.min.css">
-  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-  <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
-  <link rel="stylesheet" href="css/swiper.css">
-  <link rel="stylesheet" href="css/Timeline.css">
-  <link rel="stylesheet" href="css/aos.css">
-
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/animate.css">
-  <link rel="stylesheet" href="css/flexslider.css">
-  <link rel="stylesheet" href="css/bootstrap.css">
-  <link rel="stylesheet" href="css/style2.css">
-
-  <style>
-    /* Contributions page styles (scoped so navbar stays identical) */
-    .contrib-main {
-      background: #000000;
-      color: #ffffff;
-      font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      line-height: 1.7;
-      scroll-snap-type: y mandatory;
-    }
-
-    .contrib-main a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .contrib-main a:hover {
-      text-decoration: underline;
-    }
-
-    .contrib-main section.slide {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      scroll-snap-align: start;
-      padding: 42px 18px;
-      position: relative;
-    }
-
-    .contrib-main .slide-inner {
-      max-width: 1180px;
-      margin: 0 auto;
-      width: 100%;
-      display: grid;
-      grid-template-columns: 1.05fr 1.45fr;
-      gap: 28px;
-      align-items: center;
-    }
-
-    .contrib-main .kicker {
-      font-weight: 700;
-      letter-spacing: .18em;
-      text-transform: uppercase;
-      margin: 0 0 10px 0;
-      font-size: 15px;
-      opacity: .9;
-    }
-
-    .contrib-main h1,
-    .contrib-main h2 {
-      margin: 0;
-      font-weight: 700;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-      line-height: 1.12;
-      color: #ffffff;
-    }
-
-    .contrib-main h1 {
-      font-size: clamp(38px, 5.2vw, 64px);
-    }
-
-    .contrib-main h2 {
-      font-size: clamp(30px, 4.2vw, 54px);
-    }
-
-    .contrib-main .role {
-      margin-top: 12px;
-      font-weight: 700;
-      font-size: 16px;
-    }
-
-    .contrib-main .meta {
-      margin-top: 6px;
-      font-size: 14px;
-      opacity: .85;
-    }
-
-    .contrib-main .desc {
-      margin-top: 18px;
-      font-size: 15px;
-      opacity: .9;
-    }
-
-    .contrib-main .bullets {
-      margin: 14px 0 0 18px;
-      font-size: 15px;
-      opacity: .9;
-    }
-
-    .contrib-main .bullets li {
-      margin: 7px 0;
-    }
-
-    .contrib-main .btnrow {
-      margin-top: 18px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .contrib-main .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 10px 14px;
-      border-radius: 999px;
-      border: 1px solid rgba(255, 255, 255, .25);
-      background: rgba(255, 255, 255, .06);
-      color: #ffffff;
-      font-size: 14px;
-      transition: transform .16s ease, background .16s ease, border-color .16s ease;
-    }
-
-    .contrib-main .btn:hover {
-      transform: translateY(-1px);
-      background: rgba(255, 255, 255, .10);
-      border-color: rgba(255, 255, 255, .45);
-      text-decoration: none;
-    }
-
-    .contrib-main .shot {
-      border-radius: 14px;
-      overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, .18);
-      background: rgba(255, 255, 255, .04);
-      box-shadow: 0 22px 60px rgba(0, 0, 0, .45);
-      min-height: 360px;
-    }
-
-    .contrib-main .shot img {
-      width: 100%;
-      height: 100%;
-      display: block;
-      object-fit: cover;
-    }
-
-    .contrib-main .portrait {
-      border-radius: 14px;
-      overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, .18);
-      background: rgba(255, 255, 255, .04);
-      box-shadow: 0 22px 60px rgba(0, 0, 0, .45);
-    }
-
-    .contrib-main .portrait img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .contrib-main .pillset {
-      margin-top: 16px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .contrib-main .pill {
-      padding: 8px 12px;
-      border-radius: 999px;
-      border: 1px solid rgba(255, 255, 255, .22);
-      background: rgba(255, 255, 255, .06);
-      font-size: 13px;
-      opacity: .95;
-    }
-
-    .contrib-main .corner-left,
-    .contrib-main .corner-right {
-      position: absolute;
-      bottom: 18px;
-      font-size: 13px;
-      opacity: .75;
-      letter-spacing: .02em;
-      user-select: none;
-      pointer-events: none;
-    }
-
-    .contrib-main .corner-left {
-      left: 18px;
-    }
-
-    .contrib-main .corner-right {
-      right: 18px;
-    }
-
-    .contrib-main .reveal {
-      opacity: 0;
-      transform: translateY(12px);
-      transition: opacity .65s ease, transform .65s ease;
-    }
-
-    .contrib-main .reveal.is-visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    @media (max-width: 920px) {
-      .contrib-main {
-        scroll-snap-type: none;
-      }
-
-      .contrib-main .slide-inner {
-        grid-template-columns: 1fr;
-      }
-
-      .contrib-main section.slide {
-        padding: 26px 16px 54px;
-      }
-
-      .contrib-main .corner-left,
-      .contrib-main .corner-right {
-        bottom: 12px;
-      }
-
-      /* Mobile fix: prevent overlap + avoid transparent bar */
-      @media (max-width: 991.98px) {
-        header.site-navbar {
-          position: fixed !important;
-          top: 0 !important;
-          left: 0;
-          right: 0;
-          width: 100%;
-          background: #000 !important;
-          /* solid on mobile */
-          z-index: 9999;
-        }
-
-        /* push the page content below the fixed navbar */
-        main.contrib-main {
-          padding-top: 80px;
-          /* adjust if your navbar height differs */
-        }
-
-        /* make sure hamburger icon is visible on black */
-        .site-menu-toggle {
-          color: #fff !important;
-        }
-      }
-
-    }
-
-    /* When the offcanvas menu is open, let it cover the header (no black strip) */
-    @media (max-width: 991.98px) {
-      .offcanvas-menu header.site-navbar {
-        z-index: 1 !important;
-        /* drop header below the mobile menu (z-index 2000) */
-      }
-
-      /* optional: if you still see a dark overlay on the header area */
-      .offcanvas-menu header.site-navbar {
-        background: transparent !important;
-      }
-    }
-  </style>
-
-</head>
-
-<body>
-
-  <div class="site-wrap">
-
-    <!-- NAVBAR (exact structure like index.html) -->
-    <div class="site-mobile-menu">
-      <div class="site-mobile-menu-header">
-        <div class="site-mobile-menu-close mt-3">
-          <span class="icon-close2 js-menu-toggle"></span>
-        </div>
-      </div>
-      <div class="site-mobile-menu-body"></div>
-    </div>
-
-    <header class="site-navbar py-3" role="banner">
-      <div class="container-fluid">
-        <div class="row align-items-center">
-
-          <div class="col-6 col-xl-2" data-aos="fade-down">
-
-          </div>
-
-          <div class="col-10 col-md-8 d-none d-xl-block" data-aos="fade-down">
-            <nav class="site-navigation position-relative text-right text-lg-center" role="navigation">
-              <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
-                <li><a href="index.html">Home</a></li>
-                <li class="active"><a href="portfolio.html">Portfolio</a></li>
-                <li class="active"><a href="myContributions.html">Project Showcase</a></li>
-                <li><a href="mySkills.html">My Skills</a></li>
-              </ul>
-
-            </nav>
-          </div>
-
-
-          <div class="col-6 col-xl-2 text-right" data-aos="fade-down">
-
-            <!-- Desktop: email on its own line, full text -->
-            <div class="d-none d-xl-inline-block">
-              <div class="nav-email-text">
-                <a href="mailto:fardoush.hassan82271@gmail.com" id="nav-email-link">
-                  <span class="icon-envelope"></span>
-                  <span class="email-full"> fardoush.hassan82271@gmail.com</span>
-                </a>
-              </div>
-
-              <ul class="site-menu js-clone-nav ml-auto list-unstyled d-flex text-right mb-0" data-class="social">
-                <!-- <li>
-                                    <a href="https://www.facebook.com/hassan.himzz" target="_blank" class="pl-0 pr-3">
-                                        <span class="icon-facebook"></span>
-                                    </a>
-                                </li> -->
-                <li>
-                  <a href="https://www.linkedin.com/in/md-fardoush-hassan/" target="_blank" class="pl-0 pr-3">
-                    <span class="icon-linkedin"></span>
-                  </a>
-                </li>
-                <!-- <li>
-                                    <a href="https://www.instagram.com/?hl=en" target="_blank" class="pl-3 pr-3">
-                                        <span class="icon-instagram"></span>
-                                    </a>
-                                </li> -->
-                <li>
-                  <a href="https://www.youtube.com/channel/UCMb7AAhzo5HtcWAdxNUkHGg" target="_blank" class="pl-3 pr-3">
-                    <span class="icon-youtube-play"></span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <!-- Mobile: keep just an icon or short text inside menu toggle area if you want later -->
-            <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;">
-              <a href="#" class="site-menu-toggle js-menu-toggle text-black">
-                <span class="icon-menu h3"></span>
-              </a>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </header>
-
-    <!-- PAGE CONTENT -->
-    <main class="contrib-main">
-      <!-- <section class="slide" id="top" aria-label="Contributions overview">
-        <div class="slide-inner reveal" style="grid-template-columns:.88fr 1.62fr;">
-          <div class="portrait">
-            <img src="images//profilePicture.jpg" alt="Portrait of Md Fardoush Hassan" loading="eager">
-          </div>
-
-          <div>
-            <p class="kicker">Portfolio</p>
-            <h1>Contributions</h1>
-
-            <p class="desc" style="max-width:64ch;">
-              A slide-style view of what I contributed across shipped and personal projects:
-              gameplay systems, AI, vehicle controls, voxel art, UI/UX, optimization, and polish.
-            </p>
-
-            <div class="pillset" aria-label="Key contribution areas">
-              <span class="pill">Unity</span>
-              <span class="pill">Gameplay Systems</span>
-              <span class="pill">AI</span>
-              <span class="pill">Vehicle Controls</span>
-              <span class="pill">Voxel Art (MagicaVoxel)</span>
-              <span class="pill">UI/UX</span>
-              <span class="pill">Optimization</span>
-            </div>
-
-            <div class="btnrow" style="margin-top:18px;">
-              <a class="btn" href="#rust-rampage">View projects</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="corner-right">1</div>
-      </section> -->
-
-      <!-- Rust Rampage -->
-      <section class="slide" id="rust-rampage" aria-label="Rust Rampage contributions">
-        <div class="slide-inner reveal">
-          <div>
-            <h2>Rust Rampage</h2>
-            <div class="role">Solo-Developed Personal Project</div>
-            <div class="meta">End-to-end development (gameplay, systems, UI, visuals, and polish)</div>
-
-            <p class="desc">
-              I built the game end-to-end — from gameplay code and systems to UI and overall visuals.
-              This is a hobby project I work on in my free time.
-            </p>
-
-            <ul class="bullets">
-              <li>Created art assets and voxel-style visuals</li>
-              <li>Implemented core mechanics and AI</li>
-              <li>Optimized performance and handled full integration &amp; polish</li>
-            </ul>
-
-            <div class="btnrow">
-              <a class="btn" href="#" target="_blank" rel="noopener">Play Store</a>
-              <a class="btn" href="#" target="_blank" rel="noopener">App Store</a>
-            </div>
-          </div>
-
-          <div class="shot">
-            <img src="images/RustRam.png" alt="Rust Rampage screenshots" loading="lazy">
-          </div>
-        </div>
-
-        <div class="corner-right">2</div>
-      </section>
-
-      <!-- Air Hockey Glow -->
-      <section class="slide" id="air-hockey-glow" aria-label="Air Hockey Glow contributions">
-        <div class="slide-inner reveal">
-          <div>
-            <h2>Air Hockey Glow</h2>
-            <div class="role">Game Designer</div>
-            <div class="meta">Office group project (3 members)</div>
-
-            <p class="desc">
-              Designed and implemented the core game system, including AI, gameplay mechanics, UI, and visuals.
-            </p>
-
-            <ul class="bullets">
-              <li>Built puck &amp; striker power-ups: vanishing, fast/slow, freeze, big/small striker, and more</li>
-              <li>Designed board mechanics: black holes, teleporters, obstacles, animated backgrounds</li>
-              <li>Helped shape the overall gameplay experience and moment-to-moment feel</li>
-            </ul>
-
-            <div class="btnrow">
-              <a class="btn" href="#" target="_blank" rel="noopener">Play Store</a>
-              <a class="btn" href="#" target="_blank" rel="noopener">App Store</a>
-            </div>
-          </div>
-
-          <div class="shot">
-            <img src="images/AGH.png" alt="Air Hockey Glow screenshots" loading="lazy">
-          </div>
-        </div>
-
-        <div class="corner-right">3</div>
-      </section>
-
-      <!-- Combat Rover -->
-      <section class="slide" id="combat-rover" aria-label="Combat Rover contributions">
-        <div class="slide-inner reveal">
-          <div>
-            <h2>Combat Rover</h2>
-            <div class="role">Technical Lead + Game Designer</div>
-            <div class="meta">Office group project (4 members)</div>
-
-            <p class="desc">
-              As technical lead, I designed core gameplay mechanics and contributed across
-              AI, level design, and 3D voxel designs.
-            </p>
-
-            <ul class="bullets">
-              <li>Designed gameplay mechanics and overall combat feel</li>
-              <li>Contributed to AI design and level design</li>
-              <li>Implemented player car control systems, animations, and vehicle controls</li>
-            </ul>
-
-            <div class="btnrow">
-              <a class="btn" href="#" target="_blank" rel="noopener">Steam</a>
-            </div>
-          </div>
-
-          <div class="shot">
-            <img src="images/CombRov.png" alt="Combat Rover screenshots" loading="lazy">
-          </div>
-        </div>
-
-        <div class="corner-right">4</div>
-      </section>
-
-      <!-- Holobike 3D -->
-      <section class="slide" id="holobike-3d" aria-label="Holobike 3D contributions">
-        <div class="slide-inner reveal">
-          <div>
-            <h2>Holobike 3D</h2>
-            <div class="role">Gameplay Mechanics &amp; Level Designer</div>
-            <div class="meta">Office project (4 members)</div>
-
-            <p class="desc">
-              Focused on level design, vehicle design, player controls, AI mechanics, and 3D voxel assets,
-              with a strong emphasis on mobile optimization.
-            </p>
-
-            <ul class="bullets">
-              <li>Designed levels and gameplay flow</li>
-              <li>Built/iterated vehicle design and player control feel</li>
-              <li>Developed AI mechanics and voxel assets</li>
-              <li>Created an optimization workflow targeting ~60 FPS on most devices</li>
-            </ul>
-
-            <div class="btnrow">
-              <a class="btn" href="#" target="_blank" rel="noopener">Play Store</a>
-              <a class="btn" href="#" target="_blank" rel="noopener">App Store</a>
-            </div>
-          </div>
-
-          <div class="shot">
-            <img src="images/Holo.png" alt="Holobike 3D screenshots" loading="lazy">
-          </div>
-        </div>
-
-        <div class="corner-right">5</div>
-      </section>
-
-      <!-- Aerthlings -->
-      <section class="slide" id="aerthlings" aria-label="Aerthlings contributions">
-        <div class="slide-inner reveal">
-          <div>
-            <h2>Aerthlings</h2>
-            <div class="role">Voxel Artist</div>
-            <div class="meta">Freelance project (international team)</div>
-
-            <p class="desc">
-              Worked as a voxel artist and character designer. Developed early character concepts and visual direction,
-              and my initial designs became the foundation for later character variations as the team grew.
-            </p>
-
-            <ul class="bullets">
-              <li>Created early character concepts and set initial visual direction</li>
-              <li>Designed voxel characters that supported later variations and expanded content</li>
-              <li>Collaborated with an international team and adapted designs as production scaled</li>
-            </ul>
-
-            <div class="btnrow">
-              <a class="btn" href="#" target="_blank" rel="noopener">Play Store</a>
-              <a class="btn" href="#" target="_blank" rel="noopener">App Store</a>
-              <a class="btn" href="#top">Back to top</a>
-            </div>
-          </div>
-
-          <div class="shot">
-            <img src="images/Aerthlings (2).png" alt="Aerthlings screenshots" loading="lazy">
-          </div>
-        </div>
-
-        <div class="corner-right">6</div>
-      </section>
-
-    </main>
-
-  </div>
-
-  <!-- SCRIPTS (same as index.html) -->
-  <script src="js/jquery-3.3.1.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/jquery-ui.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/jquery.countdown.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/bootstrap-datepicker.min.js"></script>
-  <script src="js/swiper.min.js"></script>
-  <script src="js/aos.js"></script>
-
-  <script src="js/picturefill.min.js"></script>
-  <script src="js/lightgallery-all.min.js"></script>
-  <script src="js/jquery.mousewheel.min.js"></script>
-
-  <script src="js/main.js"></script>
-
-  <script src="js/vendor/jquery.min.js"></script>
-  <script src="js/vendor/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/vendor/popper.min.js"></script>
-  <script src="js/vendor/bootstrap.min.js"></script>
-  <script src="js/vendor/jquery.easing.1.3.js"></script>
-  <script src="js/vendor/jquery.stellar.min.js"></script>
-  <script src="js/vendor/jquery.waypoints.min.js"></script>
-  <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
-  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-  <script src="js/custom.js"></script>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <script>
     (function () {
-      var emailLink = document.getElementById('nav-email-link');
-      if (!emailLink) return;
-
-      var email = 'fardoush.hassan82271@gmail.com';
-
-      emailLink.addEventListener('click', function () {
-        if (navigator.clipboard && navigator.clipboard.writeText) {
-          navigator.clipboard.writeText(email).catch(function (err) {
-            console.warn('Could not copy email to clipboard:', err);
-          });
-        }
-      });
+      var saved = localStorage.getItem("theme");
+      document.documentElement.setAttribute("data-theme", saved === "dark" ? "dark" : "light");
     })();
   </script>
+  <title>Project Showcase — Fardoush Hassan Himu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Sora:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/look.css?v=4">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html">Fardoush Hassan</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span></span>
+      <span class="sr-only">Menu</span>
+    </button>
+    <nav id="site-nav" class="site-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="highlights.html">Highlights</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="myContributions.html" class="is-current">Project Showcase</a>
+      <a href="art.html">Voxel Art</a>
+      <a href="mySkills.html">My Skills</a>
+    </nav>
+    <div class="nav-tools">
+      <button class="theme-toggle" type="button" aria-pressed="false">Light</button>
+      <a href="mailto:fardoush.hassan82271@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/md-fardoush-hassan/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </header>
 
-  <script>
-    $(document).ready(function () {
-      if ($('#lightgallery').length) {
-        $('#lightgallery').lightGallery();
-      }
-    });
-  </script>
+  <section class="page-hero">
+    <h1>Project Showcase</h1>
+    <p>What I actually made on each game: gameplay, AI, vehicles, voxel art, UI, and polish.</p>
+    <ul class="legend">
+      <li><span class="dot"></span> Role on the project</li>
+      <li><span class="dot green"></span> Systems I built</li>
+      <li><span class="dot white"></span> Where to play it</li>
+    </ul>
+  </section>
 
-  <script>
-    // Scroll reveal for slide content (with mobile fallback)
-    const revealEls = document.querySelectorAll('.contrib-main .reveal');
+  <main class="section">
+    <div class="wrap case-list">
+      <article class="case" id="rust-rampage">
+        <div class="case-copy">
+          <p class="kicker">Personal</p>
+          <h2>Rust Rampage</h2>
+          <p class="role">Solo-developed</p>
+          <p class="meta">End-to-end development: gameplay, systems, UI, visuals, and polish</p>
+          <p>I built the game end-to-end, from gameplay code and systems to UI and overall visuals. This is a hobby project I work on in my free time.</p>
+          <ul>
+            <li>Created art assets and voxel-style visuals</li>
+            <li>Implemented core mechanics and AI</li>
+            <li>Optimized performance and handled full integration and polish</li>
+          </ul>
+          <div class="game-links">
+            <a class="text-btn" href="https://play.google.com/store/apps/details?id=com.GameBanai.RustRampage" target="_blank" rel="noopener">Play Store</a>
+            <a class="text-btn" href="https://testflight.apple.com/join/JTwbRMvD" target="_blank" rel="noopener">TestFlight</a>
+          </div>
+        </div>
+        <img src="images/RustRam.png" alt="Rust Rampage screenshots">
+      </article>
 
-    if (!('IntersectionObserver' in window)) {
-      revealEls.forEach(el => el.classList.add('is-visible'));
-    } else {
-      const obs = new IntersectionObserver((entries) => {
-        for (const e of entries) {
-          if (e.isIntersecting) e.target.classList.add('is-visible');
-        }
-      }, { threshold: 0.12 });
+      <article class="case" id="air-hockey-glow">
+        <div class="case-copy">
+          <p class="kicker">Professional</p>
+          <h2>Air Hockey Glow</h2>
+          <p class="role">Game designer</p>
+          <p class="meta">Office group project (3 members)</p>
+          <p>Designed and implemented the core game system, including AI, gameplay mechanics, UI, and visuals.</p>
+          <ul>
+            <li>Built puck and striker power-ups: vanishing, fast/slow, freeze, big/small striker, and more</li>
+            <li>Designed board mechanics: black holes, teleporters, obstacles, animated backgrounds</li>
+            <li>Helped shape the overall gameplay experience and moment-to-moment feel</li>
+          </ul>
+          <div class="game-links">
+            <a class="text-btn" href="https://play.google.com/store/apps/details?id=com.air.hockey.glow.hd&pcampaignid=web_share" target="_blank" rel="noopener">Play Store</a>
+            <a class="text-btn" href="https://apps.apple.com/us/app/air-hockey-glow-hd-arcade-2d/id1549140064" target="_blank" rel="noopener">App Store</a>
+          </div>
+        </div>
+        <img src="images/AGH.png" alt="Air Hockey Glow screenshots">
+      </article>
 
-      revealEls.forEach(el => obs.observe(el));
-    }
-  </script>
+      <article class="case" id="combat-rover">
+        <div class="case-copy">
+          <p class="kicker">Professional</p>
+          <h2>Combat Rover</h2>
+          <p class="role">Technical lead and game designer</p>
+          <p class="meta">Office group project (4 members)</p>
+          <p>As technical lead, I designed core gameplay mechanics and contributed across AI, level design, and 3D voxel designs.</p>
+          <ul>
+            <li>Designed gameplay mechanics and overall combat feel</li>
+            <li>Contributed to AI design and level design</li>
+            <li>Implemented player car control systems, animations, and vehicle controls</li>
+          </ul>
+          <div class="game-links">
+            <a class="text-btn" href="https://store.steampowered.com/app/3153200/Combat_Rover_Operation_Storm/" target="_blank" rel="noopener">Steam</a>
+          </div>
+        </div>
+        <img src="images/CombRov.png" alt="Combat Rover screenshots">
+      </article>
 
+      <article class="case" id="holobike-3d">
+        <div class="case-copy">
+          <p class="kicker">Professional</p>
+          <h2>Holobike 3D</h2>
+          <p class="role">Gameplay mechanics and level designer</p>
+          <p class="meta">Office project (4 members)</p>
+          <p>Focused on level design, vehicle design, player controls, AI mechanics, and 3D voxel assets, with a strong emphasis on mobile optimization.</p>
+          <ul>
+            <li>Designed levels and gameplay flow</li>
+            <li>Built and iterated vehicle design and player control feel</li>
+            <li>Developed AI mechanics and voxel assets</li>
+            <li>Created an optimization workflow targeting about 60 FPS on most devices</li>
+          </ul>
+          <div class="game-links">
+            <a class="text-btn" href="https://play.google.com/store/apps/details?id=com.ArcSys.Holobike&hl=en" target="_blank" rel="noopener">Play Store</a>
+            <a class="text-btn" href="https://apps.apple.com/us/app/holobike-3d/id6477530630" target="_blank" rel="noopener">App Store</a>
+          </div>
+        </div>
+        <img src="images/Holo.png" alt="Holobike 3D screenshots">
+      </article>
 
+      <article class="case" id="aerthlings">
+        <div class="case-copy">
+          <p class="kicker">Professional</p>
+          <h2>Aerthlings</h2>
+          <p class="role">Voxel artist</p>
+          <p class="meta">Freelance project with an international team</p>
+          <p>Worked as a voxel artist and character designer. Early character concepts and visual direction became the foundation for later character variations as the team grew.</p>
+          <ul>
+            <li>Created early character concepts and set the initial visual direction</li>
+            <li>Designed voxel characters that supported later variations</li>
+            <li>Collaborated with an international team as production scaled</li>
+          </ul>
+          <div class="game-links">
+            <a class="text-btn" href="https://play.google.com/store/apps/details?id=com.moderngames.aerthlings&hl=en" target="_blank" rel="noopener">Play Store</a>
+            <a class="text-btn" href="https://apps.apple.com/us/app/aerthlings/id6449201808" target="_blank" rel="noopener">App Store</a>
+          </div>
+        </div>
+        <img src="images/Aerthlings (2).png" alt="Aerthlings screenshots">
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-foot">
+    <div class="wrap">
+      <div>
+        <strong>Fardoush Hassan Himu</strong>
+        <p>A closer look at the systems, art, and design behind the games.</p>
+      </div>
+      <div class="foot-links">
+        <a href="portfolio.html">Portfolio</a>
+        <a href="mySkills.html">My Skills</a>
+        <a href="mailto:fardoush.hassan82271@gmail.com">Email</a>
+      </div>
+    </div>
+  </footer>
+  <script src="js/look.js?v=2"></script>
 </body>
-
 </html>

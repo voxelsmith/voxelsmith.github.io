@@ -1,479 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
-<style>
-    /* Keep navbar black even after scroll */
-    .site-navbar.scrolled {
-        background-color: #000000 !important;
-    }
-
-    .site-navbar.scrolled .site-menu>li>a {
-        color: #ffffff !important;
-    }
-
-    /* Social + mobile icons stay visible on dark background */
-    .site-navbar.scrolled .icon-menu,
-    .site-navbar.scrolled .icon-close2,
-    .site-navbar.scrolled .icon-facebook,
-    .site-navbar.scrolled .icon-linkedin,
-    .site-navbar.scrolled .icon-instagram,
-    .site-navbar.scrolled .icon-youtube-play {
-        color: #ffffff !important;
-    }
-
-    #email-toast {
-        position: fixed;
-        bottom: 20px;
-        left: 50%;
-        transform: translateX(-50%) translateY(10px);
-        background: rgba(0, 0, 0, 0.9);
-        color: #ffffff;
-        padding: 8px 16px;
-        border-radius: 999px;
-        font-size: 0.85rem;
-        letter-spacing: 0.05em;
-        text-transform: uppercase;
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity 0.2s ease, transform 0.2s ease;
-        z-index: 9999;
-    }
-
-    #email-toast.show {
-        opacity: 1;
-        transform: translateX(-50%) translateY(0);
-    }
-
-    .nav-email-text {
-        text-align: right;
-        margin-bottom: 4px;
-    }
-
-    .nav-email-text a {
-        color: #ffffff;
-        font-size: 0.8rem;
-        text-decoration: none;
-        white-space: normal;
-        /* allow wrapping if needed */
-    }
-
-    .nav-email-text a:hover {
-        text-decoration: underline;
-    }
-
-    .nav-email-text .icon-envelope {
-        margin-right: 4px;
-        vertical-align: middle;
-    }
-
-    .nav-email-text .email-full {
-        vertical-align: middle;
-    }
-</style>
-
-
 <head>
-    <title>Home &mdash; </title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="fonts/icomoon/style.css">
-
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <link rel="stylesheet" href="css/jquery-ui.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-
-    <link rel="stylesheet" href="css/lightgallery.min.css">
-
-    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-
-    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
-
-    <link rel="stylesheet" href="css/swiper.css">
-    <link rel="stylesheet" href="css/Timeline.css">
-
-    <link rel="stylesheet" href="css/aos.css">
-    <!-- 2nd part -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/flexslider.css">
-    <link rel="stylesheet" href="fonts/icomoon/style.css">
-
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/style2.css">
-
-    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    (function () {
+      var saved = localStorage.getItem("theme");
+      document.documentElement.setAttribute("data-theme", saved === "dark" ? "dark" : "light");
+    })();
+  </script>
+  <title>Home — Fardoush Hassan Himu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Sora:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/look.css?v=4">
 </head>
-
 <body>
-
-    <div class="site-wrap">
-
-        <div class="site-mobile-menu">
-            <div class="site-mobile-menu-header">
-                <div class="site-mobile-menu-close mt-3">
-                    <span class="icon-close2 js-menu-toggle"></span>
-                </div>
-            </div>
-            <div class="site-mobile-menu-body"></div>
-        </div>
-
-
-
-
-        <header class="site-navbar py-3" role="banner">
-
-            <div class="container-fluid">
-                <div class="row align-items-center">
-
-                    <div class="col-6 col-xl-2" data-aos="fade-down">
-                        <h1 class="mb-0">
-                            <a href="index.html" class="text-white h2 mb-0"></a>
-                        </h1>
-                    </div>
-                    <div class="col-10 col-md-8 d-none d-xl-block" data-aos="fade-down">
-                        <nav class="site-navigation position-relative text-right text-lg-center" role="navigation">
-                            <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
-                                <li><a href="index.html">Home</a></li>
-                                <li class="active"><a href="portfolio.html">Portfolio</a></li>
-                                <li class="active"><a href="myContributions.html">Project Showcase</a></li>
-                                <li><a href="mySkills.html">My Skills</a></li>
-                            </ul>
-
-                        </nav>
-                    </div>
-
-
-
-
-
-
-
-                    <div class="col-6 col-xl-2 text-right" data-aos="fade-down">
-
-                        <!-- Desktop: email on its own line, full text -->
-                        <div class="d-none d-xl-inline-block">
-                            <div class="nav-email-text">
-                                <a href="mailto:fardoush.hassan82271@gmail.com" id="nav-email-link">
-                                    <span class="icon-envelope"></span>
-                                    <span class="email-full"> fardoush.hassan82271@gmail.com</span>
-                                </a>
-                            </div>
-
-                            <ul class="site-menu js-clone-nav ml-auto list-unstyled d-flex text-right mb-0"
-                                data-class="social">
-                                <!-- <li>
-                                    <a href="https://www.facebook.com/hassan.himzz" target="_blank" class="pl-0 pr-3">
-                                        <span class="icon-facebook"></span>
-                                    </a>
-                                </li> -->
-                                <li>
-                                    <a href="https://www.linkedin.com/in/md-fardoush-hassan/" target="_blank"
-                                        class="pl-0 pr-3">
-                                        <span class="icon-linkedin"></span>
-                                    </a>
-                                </li>
-                                <!-- <li>
-                                    <a href="https://www.instagram.com/?hl=en" target="_blank" class="pl-3 pr-3">
-                                        <span class="icon-instagram"></span>
-                                    </a>
-                                </li> -->
-                                <li>
-                                    <a href="https://www.youtube.com/channel/UCMb7AAhzo5HtcWAdxNUkHGg" target="_blank"
-                                        class="pl-3 pr-3">
-                                        <span class="icon-youtube-play"></span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <!-- Mobile: keep just an icon or short text inside menu toggle area if you want later -->
-                        <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3"
-                            style="position: relative; top: 3px;">
-                            <a href="#" class="site-menu-toggle js-menu-toggle text-black">
-                                <span class="icon-menu h3"></span>
-                            </a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-        </header>
-
-
-
-        <div class="container-fluid" data-aos="fade" data-aos-delay="500">
-
-
-
-
-            <section class="site-hero" style="background-image: url(images/himu5.jpg);" id="section-home"
-                data-stellar-background-ratio="0.5">
-                <div class="container">
-                    <div class="row intro-text align-items-center justify-content-center">
-                        <div class="col-md-10 text-center pt-5">
-                            <img src="images/profilePicture.jpg" alt="Profile Picture" class="rounded-circle mb-4"
-                                style="width: 240px; height: 240px; object-fit: cover; border: 3px solid rgb(160, 160, 160);">
-
-                            <h1 class="site-heading site-animate">Hello, I'm <strong class="d-block">Fardoush Hassan
-                                    Himu</strong></h1>
-                            <strong class="d-block text-white text-uppercase letter-spacing">Unity Game Developer, Voxel
-                                Artist , Technical Artist</strong>
-                            <br>
-                            <br>
-                            <br>
-                            <a href="https://drive.google.com/file/d/1WO93JC_mYvBaLLRLZGwWwDaK1NmZVfpK/view?usp=sharing"
-                                target="blank" class="btn btn-secondary px-4 py-2 btn-sm">Download CV</a>
-
-                        </div>
-                    </div>
-
-
-
-
-
-                </div>
-            </section>
-            <!-- section -->
-
-            <section id="section06" class="demo">
-                <h1></h1>
-                <a href="#section-resume">
-                    <span></span>
-                </a>
-            </section>
-            <section class="site-section " id="section-resume">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12 mb-5">
-                            <div class="section-heading text-center">
-                                <!-- <h2>My <strong>Resume</strong></h2> -->
-                                <h2 class="mb-5">Experience</h2>
-
-                                <section id="timeline" class="experience-cards">
-                                    <div class="experience-cards__wrapper">
-
-                                        <!-- Torpedo Labs -->
-                                        <article class="experience-card">
-                                            <div class="experience-card__duration">
-                                                <span class="experience-card__dates">
-                                                    Apr 2025<br>– Present
-                                                </span>
-                                                <span class="experience-card__line"></span>
-                                            </div>
-
-                                            <div class="experience-card__content">
-                                                <header class="experience-card__header">
-                                                    <h3 class="experience-card__role">Technical Artist</h3>
-                                                    <p class="experience-card__company">
-                                                        Torpedo Labs INC, USA <span
-                                                            class="experience-card__location">(Remote)</span>
-                                                    </p>
-                                                </header>
-
-                                                <p class="experience-card__description">
-                                                    Technical Artist on <strong>Wynn Slots</strong>, creating and
-                                                    integrating UI assets and effects,
-                                                    building custom tools, and working with shaders to keep visuals
-                                                    polished while staying performant.
-                                                </p>
-                                            </div>
-                                        </article>
-
-                                        <!-- Modern Games Inc -->
-                                        <article class="experience-card">
-                                            <div class="experience-card__duration">
-                                                <span class="experience-card__dates">
-                                                    Jun 2025<br>– Present
-                                                </span>
-                                                <span class="experience-card__line"></span>
-                                            </div>
-
-                                            <div class="experience-card__content">
-                                                <header class="experience-card__header">
-                                                    <h3 class="experience-card__role">Game Designer</h3>
-                                                    <p class="experience-card__company">
-                                                        Modern Games Inc, USA <span
-                                                            class="experience-card__location">(Remote)</span>
-                                                    </p>
-                                                </header>
-
-                                                <p class="experience-card__description">
-                                                    Working on the <strong>Aerthlings</strong> series: collaborating on
-                                                    level layouts, character designs
-                                                    and early prototypes, and helping define the project’s visual and
-                                                    design direction with senior devs
-                                                    and voxel artists.
-                                                </p>
-                                            </div>
-                                        </article>
-
-                                        <!-- Arclite Systems -->
-                                        <article class="experience-card">
-                                            <div class="experience-card__duration">
-                                                <span class="experience-card__dates">
-                                                    Jun 2022<br>– Apr 2025
-                                                </span>
-                                                <span class="experience-card__line"></span>
-                                            </div>
-
-                                            <div class="experience-card__content">
-                                                <header class="experience-card__header">
-                                                    <h3 class="experience-card__role">Game Developer</h3>
-                                                    <p class="experience-card__company">
-                                                        Arclite Systems
-                                                    </p>
-                                                </header>
-
-                                                <p class="experience-card__description">
-                                                    Full-stack game dev work: gameplay systems, visuals, optimization
-                                                    and AI design. Also worked on
-                                                    monetization and store analytics for Play Store and App Store, plus
-                                                    animation to ship polished
-                                                    mobile experiences.
-                                                </p>
-                                            </div>
-                                        </article>
-
-                                        <!-- Hi-Tech Bangla -->
-                                        <article class="experience-card">
-                                            <div class="experience-card__duration">
-                                                <span class="experience-card__dates">
-                                                    Jan 2021<br>– Jan 2022
-                                                </span>
-                                                <span class="experience-card__line"></span>
-                                            </div>
-
-                                            <div class="experience-card__content">
-                                                <header class="experience-card__header">
-                                                    <h3 class="experience-card__role">Jr. Game Developer</h3>
-                                                    <p class="experience-card__company">
-                                                        Hi-Tech Bangla
-                                                    </p>
-                                                </header>
-
-                                                <p class="experience-card__description">
-                                                    Helped design and develop army radio simulation software and
-                                                    immersive environments, focusing
-                                                    on realism and functionality in military-style simulations.
-                                                </p>
-                                            </div>
-                                        </article>
-
-                                        <!-- Upwork Freelance -->
-                                        <article class="experience-card">
-                                            <div class="experience-card__duration">
-                                                <span class="experience-card__dates">
-                                                    Ongoing
-                                                </span>
-                                                <span class="experience-card__line"></span>
-                                            </div>
-
-                                            <div class="experience-card__content">
-                                                <header class="experience-card__header">
-                                                    <h3 class="experience-card__role">Freelancer – Game Developer</h3>
-                                                    <p class="experience-card__company">
-                                                        Upwork <span class="experience-card__location">(Remote)</span>
-                                                    </p>
-                                                </header>
-
-                                                <p class="experience-card__description">
-                                                    Top-Rated Unity and voxel-art freelancer with 70+ completed projects
-                                                    and a 100% job success rate,
-                                                    delivering complex work in animation, optimization, AI, publishing
-                                                    and monetization.
-                                                </p>
-                                            </div>
-                                        </article>
-
-                                    </div>
-                                </section>
-
-                            </div>
-                        </div>
-
-
-                    </div>
-                </div>
-        </div>
-        </section>
-
+  <header class="topbar">
+    <a class="brand" href="index.html">Fardoush Hassan</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span></span>
+      <span class="sr-only">Menu</span>
+    </button>
+    <nav id="site-nav" class="site-nav" aria-label="Primary">
+      <a href="index.html" class="is-current">Home</a>
+      <a href="highlights.html">Highlights</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="myContributions.html">Project Showcase</a>
+      <a href="art.html">Voxel Art</a>
+      <a href="mySkills.html">My Skills</a>
+    </nav>
+    <div class="nav-tools">
+      <button class="theme-toggle" type="button" aria-pressed="false">Light</button>
+      <a href="mailto:fardoush.hassan82271@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/md-fardoush-hassan/" target="_blank" rel="noopener">LinkedIn</a>
     </div>
-    <script>
-        (function () {
-            var emailLink = document.getElementById('nav-email-link');
-            if (!emailLink) return;
+  </header>
 
-            var email = 'fardoush.hassan82271@gmail.com';
+  <section class="page-hero">
+    <div class="home-hero">
+      <img class="portrait" src="images/profilePicture.jpg" alt="Fardoush Hassan Himu">
+      <div>
+        <p class="role-line">Unity · Voxel art · Technical art</p>
+        <h1>Fardoush Hassan Himu</h1>
+        <p>I build and polish games: gameplay, shaders, tools, and voxel characters. Currently a technical artist on Wynn Slots and a designer on Aerthlings.</p>
+        <div class="hero-actions">
+          <a class="btn btn-light" href="portfolio.html">View portfolio</a>
+          <a class="btn btn-ghost" href="https://drive.google.com/file/d/1WO93JC_mYvBaLLRLZGwWwDaK1NmZVfpK/view?usp=sharing" target="_blank" rel="noopener">Download CV</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-            emailLink.addEventListener('click', function () {
-                // Try to copy email to clipboard (works in most modern browsers)
-                if (navigator.clipboard && navigator.clipboard.writeText) {
-                    navigator.clipboard.writeText(email).catch(function (err) {
-                        console.warn('Could not copy email to clipboard:', err);
-                    });
-                }
-                // Do NOT preventDefault -> this keeps the mailto: working
-                // So it can also open Gmail / email client
-            });
-        })();
-    </script>
+  <main>
+    <section class="section">
+      <div class="wrap">
+        <h2>Currently working on</h2>
+        <article class="now" id="rust-rampage">
+          <img class="now-art" src="images/rust/key-art.png" alt="Rust Rampage key art, a voxel truck chase through the desert">
+          <div class="now-copy">
+            <img class="now-logo" src="images/rust/logo.png" alt="Rust Rampage logo">
+            <p class="now-kicker">GameBanai · Personal beta</p>
+            <h2>Rust Rampage</h2>
+            <p>An open world vehicle combat game where you fight, build cars, upgrade, and ride epic storms to survive. I’m building it end to end at GameBanai.</p>
+            <div class="now-points">
+              <span>Solo car battles</span>
+              <span>Build your war rig</span>
+              <span>Fight giant beasts</span>
+              <span>Upgrade in the garage</span>
+            </div>
+            <div class="shot-row">
+              <img src="images/rust/solo-battle.jpg" alt="A built war rig in the desert">
+              <img src="images/rust/war-rig.jpg" alt="A character in front of a burning outpost">
+              <img src="images/rust/beasts.jpg" alt="A truck fighting a giant sand beast">
+              <img src="images/rust/garage.jpg" alt="A yellow truck outside the garage">
+            </div>
+            <div class="hero-actions">
+              <a class="btn btn-light" href="https://play.google.com/store/apps/details?id=com.GameBanai.RustRampage" target="_blank" rel="noopener">Play Store</a>
+              <a class="btn btn-ghost" href="https://testflight.apple.com/join/JTwbRMvD" target="_blank" rel="noopener">TestFlight</a>
+              <a class="btn btn-ghost" href="https://gamebanai.com" target="_blank" rel="noopener">GameBanai</a>
+              <a class="btn btn-ghost" href="myContributions.html#rust-rampage">Build story</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
 
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/jquery-migrate-3.0.1.min.js"></script>
-    <script src="js/jquery-ui.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.stellar.min.js"></script>
-    <script src="js/jquery.countdown.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/bootstrap-datepicker.min.js"></script>
-    <script src="js/swiper.min.js"></script>
-    <script src="js/aos.js"></script>
+    <section class="section">
+      <div class="wrap">
+        <h2>Highlights</h2>
+        <div class="award-grid">
+          <article class="award">
+            <p class="kicker">Erasmus Mundus</p>
+            <h2>REPLAY scholar</h2>
+            <p>European Master in game design, studied across Lisbon, Genk, and Helsinki.</p>
+            <div class="source-links">
+              <a class="text-btn" href="highlights.html#erasmus">Read the highlight</a>
+            </div>
+          </article>
+          <article class="award">
+            <p class="kicker">United Nations · 2021</p>
+            <h2>Digital Games for Peace</h2>
+            <p>One of 53 youth leaders selected to design games for intercultural dialogue and social-emotional learning.</p>
+            <div class="source-links">
+              <a class="text-btn" href="highlights.html#games-for-peace">See the achievement</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-    <script src="js/picturefill.min.js"></script>
-    <script src="js/lightgallery-all.min.js"></script>
-    <script src="js/jquery.mousewheel.min.js"></script>
+    <section class="section">
+      <div class="wrap">
+        <h2>Featured</h2>
+        <div class="featured-grid">
+          <article class="game-card">
+            <div class="game-shot">
+              <img src="images/wynnSlots.png" alt="Wynn Slots">
+              <span class="badge badge-pro">Professional</span>
+              <span class="badge badge-feature">Featured</span>
+            </div>
+            <div class="game-body">
+              <h3>Wynn Slots</h3>
+              <p class="game-meta">Torpedo Labs · Technical art, UI, and shaders</p>
+              <div class="tags"><span>Unity</span><span>Mobile</span></div>
+              <div class="game-links">
+                <a class="text-btn" href="portfolio.html#wynn-slots">Open in portfolio</a>
+              </div>
+            </div>
+          </article>
+          <article class="game-card">
+            <div class="game-shot">
+              <img src="images/aerthlings.png" alt="Aerthlings">
+              <span class="badge badge-pro">Professional</span>
+              <span class="badge badge-feature">Featured</span>
+            </div>
+            <div class="game-body">
+              <h3>Aerthlings</h3>
+              <p class="game-meta">Modern Games Inc · Levels, characters, and voxel direction</p>
+              <div class="tags"><span>Unity</span><span>Voxel</span><span>Mobile</span></div>
+              <div class="game-links">
+                <a class="text-btn" href="portfolio.html#aerthlings">Open in portfolio</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-    <script src="js/main.js"></script>
+    <section class="section">
+      <div class="wrap">
+        <h2>Experience</h2>
+        <div class="experience">
+          <article class="job">
+            <time>Apr 2025 – Present</time>
+            <div>
+              <h3>Technical Artist</h3>
+              <p class="company">Torpedo Labs INC, USA (Remote)</p>
+              <p>Technical artist on Wynn Slots, creating and integrating UI assets and effects, building custom tools, and working with shaders to keep visuals polished while staying performant.</p>
+            </div>
+          </article>
+          <article class="job">
+            <time>Jun 2025 – Dec 2026</time>
+            <div>
+              <h3>Game Designer</h3>
+              <p class="company">Modern Games Inc, USA (Remote)</p>
+              <p>Working on the Aerthlings series: collaborating on level layouts, character designs and early prototypes, and helping define the project’s visual and design direction with senior devs and voxel artists.</p>
+            </div>
+          </article>
+          <article class="job">
+            <time>Jun 2022 – Apr 2025</time>
+            <div>
+              <h3>Game Developer</h3>
+              <p class="company">Arclite Systems</p>
+              <p>Full-stack game dev work: gameplay systems, visuals, optimization and AI design. Also worked on monetization and store analytics for Play Store and App Store, plus animation to ship polished mobile experiences.</p>
+            </div>
+          </article>
+          <article class="job">
+            <time>Jan 2021 – Jan 2022</time>
+            <div>
+              <h3>Jr. Game Developer</h3>
+              <p class="company">Hi-Tech Bangla</p>
+              <p>Helped design and develop army radio simulation software and immersive environments, focusing on realism and functionality in military-style simulations.</p>
+            </div>
+          </article>
+          <article class="job">
+            <time>Ongoing</time>
+            <div>
+              <h3>Freelancer – Game Developer</h3>
+              <p class="company">Upwork (Remote)</p>
+              <p>Top-Rated Unity and voxel-art freelancer with 70+ completed projects and a 100% job success rate, delivering complex work in animation, optimization, AI, publishing and monetization.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    <script>
-        $(document).ready(function () {
-            $('#lightgallery').lightGallery();
-        });
-    </script>
-
-
-
-
-
-
-
-
-
-
-
-
-    <script src="js/vendor/jquery.min.js"></script>
-    <script src="js/vendor/jquery-migrate-3.0.1.min.js"></script>
-    <script src="js/vendor/popper.min.js"></script>
-    <script src="js/vendor/bootstrap.min.js"></script>
-
-    <script src="js/vendor/jquery.easing.1.3.js"></script>
-
-    <script src="js/vendor/jquery.stellar.min.js"></script>
-    <script src="js/vendor/jquery.waypoints.min.js"></script>
-
-    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
-    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-    <script src="js/custom.js"></script>
-
+  <footer class="site-foot">
+    <div class="wrap">
+      <div>
+        <strong>Fardoush Hassan Himu</strong>
+        <p>Unity game developer, voxel artist, and technical artist.</p>
+      </div>
+      <div class="foot-links">
+        <a href="mailto:fardoush.hassan82271@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/md-fardoush-hassan/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.youtube.com/channel/UCMb7AAhzo5HtcWAdxNUkHGg" target="_blank" rel="noopener">YouTube</a>
+        <a href="mySkills.html">My Skills</a>
+      </div>
+    </div>
+  </footer>
+  <script src="js/look.js?v=2"></script>
 </body>
-
 </html>

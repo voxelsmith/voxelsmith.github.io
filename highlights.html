@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    (function () {
+      var saved = localStorage.getItem("theme");
+      document.documentElement.setAttribute("data-theme", saved === "dark" ? "dark" : "light");
+    })();
+  </script>
+  <title>Highlights — Fardoush Hassan Himu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Sora:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/look.css?v=4">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html">Fardoush Hassan</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span></span>
+      <span class="sr-only">Menu</span>
+    </button>
+    <nav id="site-nav" class="site-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="highlights.html" class="is-current">Highlights</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="myContributions.html">Project Showcase</a>
+      <a href="art.html">Voxel Art</a>
+      <a href="mySkills.html">My Skills</a>
+    </nav>
+    <div class="nav-tools">
+      <button class="theme-toggle" type="button" aria-pressed="false">Light</button>
+      <a href="mailto:fardoush.hassan82271@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/md-fardoush-hassan/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <h1>Highlights</h1>
+    <p>Selected for international programs in game design, peacebuilding, and youth leadership.</p>
+  </section>
+
+  <main>
+    <section class="section" id="erasmus">
+      <div class="wrap">
+        <h2>Erasmus Mundus</h2>
+        <article class="replay">
+          <p class="now-kicker">REPLAY · Game Design Masters</p>
+          <h2>Erasmus Mundus scholar</h2>
+          <p>I was awarded an Erasmus Mundus scholarship for REPLAY, the two-year European master’s in game design. The program moves through three game schools, and the work is designing, experimenting, and building meaningful games.</p>
+          <div class="campus-row">
+            <div>
+              <strong>Lisbon</strong>
+              <span>Lusófona University</span>
+            </div>
+            <div>
+              <strong>Genk</strong>
+              <span>LUCA School of Arts</span>
+            </div>
+            <div>
+              <strong>Helsinki</strong>
+              <span>Aalto University</span>
+            </div>
+          </div>
+          <div class="source-links">
+            <a class="btn btn-light" href="https://www.replaymasters.eu/" target="_blank" rel="noopener">REPLAY program</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="games-for-peace">
+      <div class="wrap">
+        <h2>Other achievements</h2>
+        <article class="award">
+          <p class="kicker">United Nations · 2021</p>
+          <h2>Digital Games for Peace</h2>
+          <p>Selected as one of 53 youth leaders for the Digital Games for Peace Challenge, a UNAOC, UNESCO MGIEP, and UNOCT/UNCCT project on games for intercultural dialogue.</p>
+          <div class="source-links">
+            <a class="text-btn" href="https://www.unaoc.org/2021/07/53-youth-selected-digital-games-for-peace-project/" target="_blank" rel="noopener">Selection announcement</a>
+            <a class="text-btn" href="https://www.unaoc.org/what-we-do/projects-and-initiatives/intercultural-dialogue-and-socio-emotional-competencies-for-peacebuilding/" target="_blank" rel="noopener">Project page</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="devlogs">
+      <div class="wrap video-block">
+        <h2>Profile video and devlogs</h2>
+        <p>A showreel of the projects I have been building. This is the place for the profile film and future devlogs.</p>
+        <div class="video-frame">
+          <video controls preload="metadata" poster="images/profilePicture.jpg">
+            <source src="videos/showreel.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-foot">
+    <div class="wrap">
+      <div>
+        <strong>Fardoush Hassan Himu</strong>
+        <p>Erasmus Mundus scholar and Digital Games for Peace youth leader.</p>
+      </div>
+      <div class="foot-links">
+        <a href="portfolio.html">Portfolio</a>
+        <a href="index.html">Home</a>
+        <a href="mailto:fardoush.hassan82271@gmail.com">Email</a>
+      </div>
+    </div>
+  </footer>
+  <script src="js/look.js?v=2"></script>
+</body>
+</html>
